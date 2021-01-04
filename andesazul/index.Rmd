@@ -21,13 +21,14 @@ library(elevatr)
 
 source("C:/Users/raimu/Dropbox/Github/EnduranceSports/R/Derivatives.R")
 
-raster_map <- readRDS("raster_DEM.RData")
 
 #cargo cumbres
 andes_azul <- read.table("andes_azul.csv", sep = ";", dec = ",")
 ## cambio los nombres de las columnas
 colnames(andes_azul) <- c("Cumbre", "elev", "lat", "long")
 aar_sp <- SpatialPointsDataFrame(data=andes_azul[,4:3],  coords=andes_azul[,4:3], proj4string=CRS("+proj=longlat +datum=WGS84"))
+
+raster_map <- get_elev_raster(aar_sp, z=6)
 
 
 #cargo alternativas de rutas
@@ -47,8 +48,7 @@ ruta_6 <- do.call("rbind",do.call("rbind", coordinates(ruta_6))) %>% data.frame(
 
 
 ruta_5 <- readGPX("mapa ruta examen.gpx")
-ruta_5 <- do.call("rbind",do.call("rbind", ruta_5$routes)) %>% t() 
-ruta_5 <- ruta_5 %>% data.frame() 
+ruta_5 <- do.call("rbind", ruta_5$routes)
 ruta_5 <- ruta_5[,1:2]
 ruta_5$lon <- as.numeric(ruta_5$lon)
 ruta_5$lat <- as.numeric(ruta_5$lat)
@@ -87,6 +87,8 @@ ruta_matt <- ordena_ruta(ruta_matt)
 ## Guia para Andes Azul Round
 
 Estos son los resultados de un semestre de trabajo de los alumnos de taller de datos, quienes planificaron la ruta para el desafio Andes Azul Round (http://matt-maynard.com/mountains/andes-azul-round/). Un total de 7 grupos hicieron sus rutas, las cuales se pueden ver a continuacion, sobrepuestas a la ruta de Matt Maynard, el creador del desafio. 
+
+Las guias y manuales elaborados por los grupos los puedes ver en [Link](./folletos_andes_azul)
 
 ## Mapas de Ruta
 
