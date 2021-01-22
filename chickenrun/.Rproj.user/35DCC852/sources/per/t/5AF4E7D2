@@ -3,23 +3,23 @@
     "path": "C:/Users/raimu/Dropbox/Github/raimun2.github.io/chickenrun/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "1501728198",
+    "hash": "3893052025",
     "contents": "",
     "dirty": false,
     "created": 1608737650131.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
-        "cursorPosition": "99,13",
-        "scrollLine": "80",
-        "last_setup_crc32": "A72A033E47bfa2bc"
+        "cursorPosition": "68,0",
+        "scrollLine": "47",
+        "last_setup_crc32": "009A798F224df4a9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1608739908,
+    "lastKnownWriteTime": 1611345815,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1608739908875,
+    "last_content_update": 1611345815917,
     "read_only": false,
     "read_only_alternatives": []
 }

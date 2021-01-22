@@ -1,6 +1,5 @@
 ---
-title: "Chicken Run"
-author: "by Human Power"
+title: "CHICKEN RUN"
 output: 
   html_document:
     df_print: kable
@@ -25,7 +24,7 @@ ruta <- readOGR("chicken love you.gpx","tracks") %>% coordinates() %>% data.fram
 colnames(ruta) <- c("long", "lat")
 rutasp <- SpatialPointsDataFrame(data=ruta, coords = ruta, proj4string=CRS("+proj=longlat +datum=WGS84"))
 
-raster_map <- readRDS("DEM_chicken.RData")
+raster_map <- get_elev_raster(rutasp,z=14) #readRDS("DEM_chicken.RData")
 ruta$elev = extract(raster_map, rutasp)
 ruta <- ruta %>% Derivatives()
 
@@ -47,13 +46,13 @@ hitossp <- SpatialPointsDataFrame(data=hitos, coords = hitos[,2:1], proj4string=
 
 
 ```{r, echo=FALSE}
-htmltools::img(src = knitr::image_uri("logoclu.png"), 
-               style = 'position:absolute; top:0; left:0; padding:10px;',
-               height = 100)
-
-htmltools::img(src = knitr::image_uri("logo.png"), 
-               style = 'position:absolute; top:0; right:0; padding:10px;',
-               height = 150)
+# htmltools::img(src = knitr::image_uri("logoclu.png"), 
+#                style = 'position:absolute; top:0; left:0; padding:10px;',
+#                height = 100)
+# 
+# htmltools::img(src = knitr::image_uri("logo.png"), 
+#                style = 'position:absolute; top:0; right:0; padding:10px;',
+#                height = 150)
 
 ## leaflet con el mapa gpx
 leaflet() %>%
@@ -64,40 +63,9 @@ leaflet() %>%
 
 ```
 
-
-# Descripcion de la ruta
-Chicken love you los invita a hacer la Chicken Run. Es una ruta que recorre las montañas de Santiago, en la pre cordillera de los Andes Chilenos. La ruta comienza en el acceso por Francisco Bulnes Correa, y inicia subiendo el Morro las Papas por su ladera surponiente. Luego baja para atravezar la planicie de San Carlos de Apoquindo para luego subir hacia la cruz de Tupper, y sigue subiendo hasta la base del Morro Guayacán. Desde aqui la ruta se dirige hacia el sur, para trepar por detrás del Alto las Viscachas. Luego de llegar al portezuelo del Alto las Viscachas, se desciende hacia el sur, camino al Salto de Apoquindo. Este es el unico punto de la ruta con agua, y es en el km 16. Luego se baja por la ladera sur hacia el poniente, hasta el paso los Peumos, donde se cruza a la ladera norte, la que lleva de vuelta al punto de partida.
-
-
+## [GPX de la ruta](./chicken love you.gpx) 
 ### Distancia total:        25 km
-
 ### Desnivel positivo:    1620 m
 
-
-El archivo GPX de la ruta lo pueden descargar desde [aca](./chicken love you.gpx) 
-
-# Reglas del desafio
-
-Para que un intento sea considerado como válido, debe:
-
-
-- Avisar su intento con más de 12 horas de anticipación en este [link](https://forms.gle/VhMQ8mimQqLBUZJU7) 
-- Registrarse en [Human Power App](https://humanpower.app/) utilizando tu cuenta de [Strava](https://www.strava.com)
-- Realizar el circuito en cualquier sentido: horario o antihorario.
-- Registrar el intento con [Strava](https://www.strava.com)
-- Sacar una selfie en el Morro Las Papas
-- Grabar video bailando el [baile del pollo](https://www.youtube.com/watch?v=8C_Uo9y2MRE) en Saltos de Apoquindo
-
-
-
-## Ranking
-
-Antes de entrar en el ranking, los resultados serán validados por [Human Power](https://humanpower.app/)
-
-
-```{r, echo=FALSE}
-## lee google doc con ranking de esfuerzos
-data.frame("Fecha" = "21-12-2020", "Atleta" = "Raimundo Sanchez", "Sentido" = "Antihorario", "Marca" = "04:02:34")
-
-```
+### Reglas del desafio disponibles en [Human Power App](https://humanpower.app/)
 
