@@ -1,0 +1,70 @@
+
+Intro :  (adaptacion para una guitarra)
+
+G ...  (tono 8+)      (escala)
+-----------------/--------------------
+--------0--------/--------------------
+--------------0--/------0--2--0-------
+-----0-----4-----/--0--2-----------0--
+-----------------/--------------------
+--3--------------/-------------------- 
+
+G           Am
+Seria tan facil siendo lluvia
+        C          C2        G  (escala)- (tono8+) G        
+solo un roce y tendria que caer
+          Am
+seria tan facil siendo monte
+       C              C2       G   (escala)         
+en mi pecho te abrazaria con mi piel
+
+          D      Em7  G
+Siempre estado vivo
+                                Em7  G
+al menos cuando he logrado llegar
+           Bm                Am7
+a ver el sabor que dejo el temor
+                 G
+de tener que olvidar
+        A7         Bm   C2    G 
+Al regresar veras 
+        A7           Bm   C2    G (escala) - intro
+Al regresar veras mi carnaval
+
+          Am
+Seria tan facil fingir
+        C                    G (escala)- (tono8+)      
+que te volvere a ver, que te volvere a ver
+          Am
+seria tan facil vivir
+         C
+con la mirada hacia adentro
+        G  (escala)
+con los ojos adentro
+        
+          D      Em7  G
+Siempre estado vivo
+                               Em7  G
+al menos cuando he logrado llegar
+           Bm                Am7
+a ver el sabor que dejo el temor
+                 G
+de tener que olvidar
+        A7           Bm   C2      G 
+Al regresar veras mi carnaval
+        A7           Bm   C2      G 
+Al regresar veras mi carnaval       
+
+Al regresar ......
+
+Acordes :
+
+G    : 3 2 0 0 0 3
+Am   : x 0 2 2 1 0
+C    : 0 3 2 0 1 0
+C2   : 0 3 2 0 3 0 
+Em7  : 0 2 2 0 3 0
+A7   : x 0 2 0 2 0
+Bm   : 2 2 4 4 3 2
+Am7  : x 0 2 0 1 0
+

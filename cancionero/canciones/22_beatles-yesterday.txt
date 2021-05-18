@@ -1,0 +1,113 @@
+The song is made up of nice simple riffs
+I've written riffs in bars because timing is important and i've written the beats 
+at the top of the bars.
+Keep playing the chord and count out the beats until it changes
+
+Tuning: Standard EADGBe
+
+The song is actually played in F major (capo 5) but it sounds fine without a capo
+
+Chords:
+C   : x32010
+Bm7 : x20202
+E7  : 020130
+Am  : x02210
+G   : 320033
+F   : 133211
+D7  : xx0212
+E   : 022100
+D6m : xx0201
+G7  : 320001
+
+Riff 1:
+Played in the verses
+  1  2  3  4   1  2  3  4
+| C          | Bm7   E7   |
+| Am       G | F     G*   | *See below
+| C          | Am    D7   |
+| F     C    |
+
+
+Riff 2:
+Played in the chorus
+  1  2  3  4   1  2  3  4
+| E     E7   | Am G  F  Am|
+| D6m   G7   | C          |
+
+
+*You may find the G chord after the F chord in the 4th measure in Riff 1 easier as 
+a barre chord (355433)
+as it only requires you to slide up 2 frets from the F barre chord
+
+Here shows how the riffs fit in with the words:
+
+
+Intro:
+
+C (for 2 measures)
+
+Verse 1:
+[Play Riff 1 twice]
+C         Bm7     E7                  Am       G  F
+Yesterday, All my troubles seemed so far away,
+         G*                    C
+Now it looks as though they're here to stay,
+    Am   D7       F    C   
+Oh, I believe in yesterday.
+C        Bm7      E7             Am         G  F             
+Suddenly, I'm not half the man I used to be
+         G*              C                         
+There's a shadow hanging over me,
+    Am    D7        F    C              
+Oh, yesterday came suddenly.
+
+
+Chorus:
+[Play Riff 2 twice]
+E     E7    Am  G  F                                   
+Why   she   had to go,
+Am Dm6            G7        C        
+I don't know, she wouldn't say.
+E   E7   Am    G   F                           
+I   said something wrong,
+Am    Dm6      G7    C                    
+Now I long for yesterday.
+
+
+Verse 2:
+[Play Riff 1 once]
+C         Bm7       E7           Am          G F
+Yesterday, Love was such an easy game to play,
+      G*              C
+Now I need a place to hide away,
+    Am   D7       F    C
+Oh, I believe in yesterday.
+
+
+Chorus:
+[Play Riff 2 twice]
+E     E7    Am  G  F                    
+Why   she   had to go,
+Am Dm6            G7       C        
+I don't know, she wouldn't say.
+E   E7   Am    G   F                           
+I   said something wrong,
+Am    Dm6      G7    C                    
+Now I long for yesterday.
+
+
+Verse 3:
+[Play Riff 1 once + last two measures repeated]
+C         Bm7        E7          Am          G F
+Yesterday, Love was such an easy game to play,
+      G*              C
+Now I need a place to hide away,
+    Am   D7       F    C
+Oh, I believe in yesterday.
+        Am       D7      F     C (let ring)
+Humm Hum-mm Humm Humm Humm-mm Humm
+
+
+
+This is my first tab so rate and comment and make any corrections neccessary
+Thanks =]
