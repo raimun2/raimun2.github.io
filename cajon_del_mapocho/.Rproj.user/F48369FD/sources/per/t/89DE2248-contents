@@ -1,0 +1,71 @@
+---
+title: "CHICKEN RUN"
+output: 
+  html_document:
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(rgdal)
+library(sp)
+library(leaflet)
+library(raster)
+library(plotKML)
+library(elevatr)
+
+source("C:/Users/raimu/Dropbox/Github/EnduranceSports/R/Derivatives.R")
+
+#cargo rutas
+ruta <- readOGR("chicken love you.gpx","tracks") %>% coordinates() %>% data.frame()
+
+colnames(ruta) <- c("long", "lat")
+rutasp <- SpatialPointsDataFrame(data=ruta, coords = ruta, proj4string=CRS("+proj=longlat +datum=WGS84"))
+
+raster_map <- get_elev_raster(rutasp,z=14) #readRDS("DEM_chicken.RData")
+ruta$elev = extract(raster_map, rutasp)
+ruta <- ruta %>% Derivatives()
+
+hitos <- data.frame(rbind(c(-33.417000, -70.505633, "Acceso Bulnes Correa"),
+                          c(-33.413761, -70.492933 , "Morro las papas"),
+                          c(-33.394399, -70.476445 , "Base Morro GuayacÃÂ¡n"),
+                          c(-33.417753, -70.469653 , "Portezuelo del Alto las Viscachas"),
+                          c(-33.441812, -70.460842 , "Salto de Apoquindo")))
+
+
+colnames(hitos) <- c("lat", "long", "Hito")
+hitos$lat <- as.numeric(hitos$lat)
+hitos$long <- as.numeric(hitos$long)
+
+hitossp <- SpatialPointsDataFrame(data=hitos, coords = hitos[,2:1], proj4string=CRS("+proj=longlat +datum=WGS84"))
+
+
+```
+
+
+```{r, echo=FALSE}
+# htmltools::img(src = knitr::image_uri("logoclu.png"), 
+#                style = 'position:absolute; top:0; left:0; padding:10px;',
+#                height = 100)
+# 
+# htmltools::img(src = knitr::image_uri("logo.png"), 
+#                style = 'position:absolute; top:0; right:0; padding:10px;',
+#                height = 150)
+
+## leaflet con el mapa gpx
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addProviderTiles(providers$OpenTopoMap) %>% ## uso mapa topografico
+  addCircleMarkers(data = rutasp, radius = 1, col = "red") %>%
+  addCircleMarkers(data = hitossp, radius = 3, col = "blue", popup = hitossp$Hito)
+
+```
+
+## [GPX de la ruta](./chicken love you.gpx) 
+### Distancia total:        25 km
+### Desnivel positivo:    1620 m
+
+### Reglas del desafio disponibles en [Human Power App](https://humanpower.app/)
+

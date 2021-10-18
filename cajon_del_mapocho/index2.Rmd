@@ -1,0 +1,138 @@
+---
+title: "Rutas posibles para el Andes Azul Round"
+author: "Raimundo Sanchez, PhD"
+date: "13-10-2020"
+output: 
+  html_document:
+    df_print: kable
+ 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(rgdal)
+library(sp)
+library(leaflet)
+library(raster)
+library(plotKML)
+library(elevatr)
+
+source("C:/Users/raimu/Dropbox/Github/EnduranceSports/R/Derivatives.R")
+
+
+#cargo cumbres
+andes_azul <- read.table("andes_azul.csv", sep = ";", dec = ",")
+## cambio los nombres de las columnas
+colnames(andes_azul) <- c("Cumbre", "elev", "lat", "long")
+aar_sp <- SpatialPointsDataFrame(data=andes_azul[,4:3],  coords=andes_azul[,4:3], proj4string=CRS("+proj=longlat +datum=WGS84"))
+
+raster_map <- get_elev_raster(aar_sp, z=12)
+
+
+#cargo alternativas de rutas
+
+ruta_matt <- readOGR("Matts Andes Azul Round.gpx","tracks") %>% coordinates() %>% data.frame()
+ruta_1 <- readOGR("GPX Ruta G1.gpx","tracks") %>% coordinates() %>% data.frame()
+ruta_4 <- readOGR("Ruta, grupo 4.gpx","tracks") %>% coordinates() %>% data.frame()
+ruta_7 <- readOGR("RUTA FINAL GRUPO 7.gpx","tracks") %>% coordinates() %>% data.frame()
+
+
+ruta_2 <- readOGR("ruta_examen.gpx" ,"tracks") 
+ruta_2 <- do.call("rbind",do.call("rbind", coordinates(ruta_2))) %>% data.frame()
+
+ruta_6 <- readOGR("Ruta Grupo 6.gpx","tracks") 
+ruta_6 <- do.call("rbind",do.call("rbind", coordinates(ruta_6))) %>% data.frame()
+
+
+ruta_5 <- readGPX("mapa ruta examen.gpx")
+ruta_5 <- do.call("rbind", ruta_5$routes)
+ruta_5 <- ruta_5[,1:2]
+ruta_5$lon <- as.numeric(ruta_5$lon)
+ruta_5$lat <- as.numeric(ruta_5$lat)
+
+ordena_ruta <- function(ruta){
+  colnames(ruta) <- c("long", "lat")
+  rutasp <- SpatialPointsDataFrame(data=ruta, coords = ruta, proj4string=CRS("+proj=longlat +datum=WGS84"))
+  ruta$elev = extract(raster_map, rutasp)
+  ruta <- ruta %>% Derivatives()
+  
+  ruta_comp <- ruta
+  ruta_comp$long <- round(ruta_comp$long,3)
+  ruta_comp$lat <- round(ruta_comp$lat,3)
+  ruta_comp <- unique(ruta_comp)
+  ruta_comp <- ruta_comp[ruta_comp$delta_distance  > quantile(ruta_comp$delta_distance, .2),]
+  
+  ruta_comp <- ruta_comp[sample(1:nrow(ruta_comp),600,TRUE),]
+  
+  rutasp <- SpatialPointsDataFrame(data=ruta_comp, coords = ruta_comp, proj4string=CRS("+proj=longlat +datum=WGS84"))
+
+  return(list("ruta"=ruta,"rutasp"=rutasp))
+}
+
+
+ruta_1 <- ordena_ruta(ruta_1)
+ruta_2 <- ordena_ruta(ruta_2)
+ruta_4 <- ordena_ruta(ruta_4)
+ruta_5 <- ordena_ruta(ruta_5)
+ruta_6 <- ordena_ruta(ruta_6)
+ruta_7 <- ordena_ruta(ruta_7)
+ruta_matt <- ordena_ruta(ruta_matt)
+
+```
+
+## Guia para Andes Azul Round
+
+Estos son los resultados de un semestre de trabajo de los alumnos de taller de datos, quienes planificaron la ruta para el desafio Andes Azul Round (http://matt-maynard.com/mountains/andes-azul-round/). Un total de 7 grupos hicieron sus rutas, las cuales se pueden ver a continuacion, sobrepuestas a la ruta de Matt Maynard, el creador del desafio. 
+
+Las guias y manuales elaborados por los grupos los puedes ver en [Link](https://www.dropbox.com/sh/oshf5odu1xhejtw/AADmofMLCVDq8eI9AVQ756Z5a?dl=0)
+
+## Mapas de Ruta
+
+El mapa es el siguiente:
+
+```{r grafico, echo=FALSE}
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addProviderTiles(providers$OpenTopoMap) %>% ## uso mapa topografico
+  addCircleMarkers(data = aar_sp, radius = 5, col = "blue", group = "Cumbres AAR") %>% #grafico cumbres andes azul
+  addCircleMarkers(data = ruta_1$rutasp, radius = 1, col = rainbow(8)[1], group="Ruta 1") %>% 
+  addCircleMarkers(data = ruta_2$rutasp, radius = 1, col = rainbow(8)[2], group="Ruta 2") %>% 
+  addCircleMarkers(data = ruta_4$rutasp, radius = 1, col = rainbow(8)[4], group="Ruta 4") %>% 
+  addCircleMarkers(data = ruta_5$rutasp, radius = 1, col = rainbow(8)[5], group="Ruta 5") %>% 
+  addCircleMarkers(data = ruta_6$rutasp, radius = 1, col = rainbow(8)[6], group="Ruta 6") %>% 
+  addCircleMarkers(data = ruta_7$rutasp, radius = 1, col = rainbow(8)[7], group="Ruta 7") %>% 
+  addCircleMarkers(data = ruta_matt$rutasp, radius = 1, col = rainbow(8)[8], group="Ruta Matt") %>% 
+  addLayersControl(
+          overlayGroups =c("Cumbres AAR", "Ruta Matt", "Ruta 1", "Ruta 2", "Ruta 3", "Ruta 4", "Ruta 5", "Ruta 6", "Ruta 7"),
+          options = layersControlOptions(collapsed=FALSE)
+          )
+```
+
+Y las distancias y desnivel ganado en cada ruta estan en la siguiente tabla
+
+```{r, echo=FALSE}
+
+tabla <- data.frame( "Ruta" = c(1,2,4,5,6,7,"Matt"),
+                     "Distancia" = c(max(ruta_1$ruta$distance),
+                            max(ruta_2$ruta$distance),
+                            max(ruta_4$ruta$distance),
+                            max(ruta_5$ruta$distance),
+                            max(ruta_6$ruta$distance),
+                            max(ruta_7$ruta$distance),
+                            max(ruta_matt$ruta$distance)),
+                      "ElevGain" =  c(sum(ruta_1$ruta$delta_elev[ruta_1$ruta$delta_elev > 0]),
+                            sum(ruta_2$ruta$delta_elev[ruta_2$ruta$delta_elev > 0]),
+                            sum(ruta_4$ruta$delta_elev[ruta_4$ruta$delta_elev > 0]),
+                            sum(ruta_5$ruta$delta_elev[ruta_5$ruta$delta_elev > 0]),
+                            sum(ruta_6$ruta$delta_elev[ruta_6$ruta$delta_elev > 0]),
+                            sum(ruta_7$ruta$delta_elev[ruta_7$ruta$delta_elev > 0]),
+                            sum(ruta_matt$ruta$delta_elev[ruta_matt$ruta$delta_elev > 0])))
+
+
+tabla$Distancia <- round(tabla$Distancia / 1000 )
+tabla$ElevGain <- round(tabla$ElevGain )
+
+print(tabla) 
+```
