@@ -4,7 +4,7 @@ author: "Raimundo Sánchez"
 output: html_document
 ---
 
-El rio Mapocho sin duda es un icono de la geografía Santiaguina, donde sus aguas han dado forma a nuestra ciudad desde que los incas y picunches habitaban el valle central de Chile. 
+El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los picunches e incas habitaban el valle central de Chile. 
 
 Sus aguas nacen desde la base del Cerro el Plomo, o Apu Wamani, protector de este valle del Mapocho, el cual ha sido visitado por los habitantes de esta zona desde tiempos inmemoriales. 
 
@@ -12,7 +12,7 @@ El cajón del Rio Mapocho ha forjado por lo tanto la cultura de montaña de nues
 
 La ruta el Cajón del Mapocho recorre algunos de estos hitos, conectando en un ciclo cerrado diversos senderos que permiten hacerse una buena idea de la grandeza y crudeza de la montaña que rodea a Santiago de Chile. 
 
-Personalmente, armé esta ruta por que me encanta correr por los cerros, la ultradistancia y el desafío de la resistencia humana. Además como Santiaguino, muchos de estos hitos me conectan con mi historia, mis recuerdos, mi familia y mi territorio. 
+Personalmente, armé esta ruta porque disfruto de correr por los cerros, de la ultradistancia y del desafío de la resistencia humana. Además como habitante de este valle, muchos de estos hitos me conectan con mi historia, mis recuerdos, mi familia y el territorio. 
 
 
 ```{r setup, include=FALSE}
@@ -157,39 +157,64 @@ ggplot() +
 
 ### Puente Ñilhue (Km 0 - Km 87)
 
-La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. Este acceso a la cordillera ha servido de lugar de iniciación en el montañismo a diversas generaciones de Santiaguinos, y muchos desconocen que hacia el norte se puede subir el Cerro Pochoco, otro clásico Santiaguino que normalmente se sube desde el sector del Arrayán. 
+La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
+
+Este acceso a la cordillera ha servido de lugar de iniciación en el montañismo a diversas generaciones de Santiaguinos, y muchos desconocen que hacia el norte se puede subir el Cerro Pochoco, otro cerro clásico que normalmente se sube desde el sector del Arrayán. 
+
+Nuestro primer tramo lleva desde puente Ñilhue hacia el cerro Pochoco. Para subir al Pochoco, a 200 metros de la partida, hay que hacer la primera locura de esta ruta y se debe saltar a una canaleta para poder [subirse al filo del cerro](https://www.strava.com/segments/26514649). 
+
+Esta ruta informal la conocí gracias a mi amigo [Matt Maynard](https://matt-maynard.com/), un especialista en encontrar pasadas libres a nuestras montañas. Al llegar a la cumbre del Pochoco se sigue a la loma de la vaca para llegar finalmente al corral Llanos de Javier.
 
 ### Corral Llanos de Javier (Km 9.5)
 
-El primer tramo lleva desde puente Ñilhue hacia el cerro Pochoco. Para subir al Pochoco, a 200 metros de la partida, hay que hacer la primera locura de esta ruta y se debe saltar a una canaleta para poder [subirse al filo del cerro](https://www.strava.com/segments/26514649). Esta ruta informal la conocí gracias a mi amigo Matt Maynard, un especialista en encontrar pasadas libres a nuestras montañas. Al llegar a la cumbre del Pochoco se sigue a la loma de la vaca para llegar finalmente al corral Llanos de Javier. Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en medio de la montaña, la cual se eleva por sobre los 1840 msnm y conecta senderos provenientes desde el Pochoco, del Santuario de la Naturaleza del Arrayán y desde Los Maitenes. 
+Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en medio de la montaña la cual se eleva por sobre los 1840 msnm y conecta senderos provenientes desde el Pochoco, del Santuario de la Naturaleza del Arrayán y desde Los Maitenes. 
+
+El segundo tramo sube desde Llanos de Javier hasta los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas. Luego de llegar a los Maitenes desciende 1 kilómetro por el camino vehicular hasta Corral Quemado.
 
 ### Corral Quemado (Km 22)
 
-El segundo tramo sube desde Llanos de Javier hasta los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas. Luego de llegar a los Maitenes desciende 1 kilómetro por el camino vehicular hasta Corral Quemado. En este punto se bifurca el camino a los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo.
+En este punto se bifurca la via proveniente desde Santiago en 2 caminos, uno hacia los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo. 
+
+La ruta sigue desde este punto hacia la Parva, atravesando las curvas hasta Villa Paulina, y luego sube por el filo hasta el centro de Ski que se encuentra en las laderas del cerro que lleva el mismo nombre.
 
 ### La Parva (Km 33.5)
 
-La ruta sigue hacia la Parva, atravesando las curvas hasta Villa Paulina, y luego sube por el filo hasta el centro de Ski que se encuentra en las laderas del Cerro que lleva el mismo nombre. En este centro de Ski recibe visitantes todo el invierno, pero en el verano también, siendo un lugar frecuentado por montañistas que se aventuran a hacer cumbres como el cerro Pintor, Leonera, o el Plomo. Quienes han hecho la ruta del Cajón del Mapocho dicen que mentalmente la ruta comienza en La Parva. Este es el primer punto con agua después de comenzar, y es el lugar perfecto para recargar energía, ajustar equipamiento y dar comienzo a la sección de alta montaña. 
+En este centro de Ski recibe visitantes todo el invierno, pero en el verano también, siendo un lugar frecuentado por montañistas que se aventuran a hacer cumbres como el cerro Pintor, Leonera, o el Plomo. 
+
+Quienes han hecho la ruta del Cajón del Mapocho dicen que mentalmente la ruta comienza en La Parva. Este es el primer punto con agua después de comenzar, y es el lugar perfecto para recargar energía, ajustar equipamiento y dar comienzo a la sección de alta montaña. 
+
+Subiendo desde el campamento Doite ubicado en la base del andarivel Las Águilas del centro de Ski, se pasa por la laguna Piuquenes, y los cerros Falsa Parva, Parva y Pintor, para eventualmente llegar a una extensa planicie de altura llamada Cancha de Carreras.
 
 ### Cancha de Carreras (Km 42)
 
-Subiendo desde el campamento Doite ubicado en la base del andarivel Las Águilas del centro de Ski, se pasa por la laguna Piuquenes, y los cerros Falsa Parva, Parva y Pintor, para eventualmente llegar a una extensa planicie de altura llamada Cancha de Carreras. Esta planicie tiene una meseta rectangular que la cultura popular también llama ovnipuerto, a 4150 msnm. En esta sección es común encontrarse con nieve hasta los meses de primavera, por lo que si desean hacer un tiempo rápido se recomienda intentar la ruta en el verano. 
+Esta planicie tiene una meseta rectangular que la cultura popular también llama ovnipuerto, a 4150 msnm. En esta sección es común encontrarse con nieve hasta los meses de primavera, por lo que si desean hacer un tiempo rápido se recomienda intentar la ruta en el verano. 
+
+Desde Cancha de Carreras sigue la ruta hacia el cerro Leonera, pero luego de un par de kilómetros se alcanza el punto más alto de la ruta a 4320 (msnm) donde hay que tomar un desvío para comenzar a descender hacia el oriente, bajando por la falda del cerro Leonera hasta el Campamento Federación.
 
 ### Campamento Federación (Km 45.5)
 
-Desde Cancha de Carreras sigue la ruta hacia el cerro Leonera, pero luego de un par de kilómetros se alcanza el punto más alto de la ruta a 4320 (msnm) donde hay que tomar un desvío para comenzar a descender hacia el oriente, bajando por la falda del cerro Leonera hasta el Campamento Federación. Este campamento se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano. La sección entre Cancha de Carreras y el Campamento Federación corresponde al segmento mas técnico de la ruta. Desde Federación aun quedan 42 kilómetros de descenso para llegar a la meta.   
+Este campamento se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano. La sección entre Cancha de Carreras y el Campamento Federación corresponde al segmento mas técnico de nuestra ruta. Desde Federación aún quedan 42 kilómetros de descenso para llegar a la meta.
 
 ### Piedra numerada (Km 51)
 
-El descenso continúa desde Federación hasta Piedra numerada, característico hito de la cordillera que es un sector intermedio para los montañistas que visitan el cerro el Plomo, y se puede acceder desde Valle Nevado o La Parva. Este sector fue utilizado por los incas para como estación de descanso en el camino hacia la cumbre del Plomo. En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo. En Piedra Numerada hay que tomar un desvío para continuar por el rio, ya que la mayoría de los visitantes se devuelven hacia los centros de Ski. En este punto es clave tomar la decisión si sigue en ruta, o si aborta misión y se devuelve hacia La Parva, la cual está a 4 kilómetros. 
+El descenso continúa desde Federación hasta Piedra numerada, característico hito de la cordillera que es un sector intermedio para los montañistas que visitan la zona, y se puede acceder desde Valle Nevado o La Parva. Este sector fue utilizado por los incas para como estación de descanso en el camino hacia la cumbre del Plomo.
+
+En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo. En Piedra Numerada hay que tomar un desvío para continuar junto al rio, ya que la ruta mas frecuentada se devuelve hacia los centros de Ski. 
+
+En este punto es clave tomar la decisión si seguir en ruta, o si aborta misión y se devuelve hacia La Parva, la cual está a 4 kilómetros. 
 
 ### Refugio del Cepo (Km 63.5)
 
 Si continúa bajando por el rio Cepo, luego de varios kilómetros llega a un refugio de arrieros ubicado en la profundidad del cajón, en la orilla norte del rio. Este refugio se puede divisar desde el camino a Valle Nevado, y es uno de los pocos hitos de evidencia humana en este sector del valle. 
 
+Un poco más abajo del refugio, el rio Cepo se junta con otros afluentes para transformarse en el rio Molina. En este tramo el cajón se va angostando y la ruta de los arrieros ancestrales fue optimizada con 7 cruces al rio antes de mantenerse por la ladera sur. En estos cruces es necesario llevar bastones debido a la fuerza del caudal.
+
+
 ### La Ermita (Km 81.5)
 
-Un poco más abajo del refugio, el rio Cepo se junta con otros afluentes para transformarse en el rio Molina. En este tramo el cajón se va angostando y la ruta de los arrieros ancestrales fue optimizada con estos 7 cruces del rio antes de mantenerse por la ladera sur.  En estos cruces es necesario llevar bastones debido a la fuerza del caudal. Luego de los cruces del rio se llega a Antahuaya, un centro de eventos en la montaña, para después llegar a la Ermita, donde el rio Molina se junta con el rio San Francisco, para dar vida al rio Mapocho. La Ermita es el último hito de la ruta, donde luego de 6 kilómetros por un camino de tierra se llega de vuelta al punto de origen, el puente Ñilhue.
+Luego de los cruces del rio se llega a Antahuaya, un centro de eventos en la montaña, para después llegar a la Ermita donde el rio Molina se junta con el rio San Francisco para dar vida al rio Mapocho.
+
+La Ermita es el último hito de la ruta, donde luego de 6 kilómetros por un camino de tierra se llega de vuelta al punto de origen, el puente Ñilhue.
 
 
 

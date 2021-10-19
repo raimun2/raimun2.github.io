@@ -3,7 +3,7 @@
     "path": "C:/Users/raimu/Dropbox/Github/raimun2.github.io/cajon_del_mapocho/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "251737280",
+    "hash": "359094161",
     "contents": "",
     "dirty": false,
     "created": 1632264062742.0,
@@ -11,16 +11,16 @@
     "relative_order": 1,
     "properties": {
         "tempName": "Untitled1",
-        "cursorPosition": "199,7",
-        "scrollLine": "176",
+        "cursorPosition": "217,0",
+        "scrollLine": "196",
         "last_setup_crc32": ""
     },
     "folds": "",
-    "lastKnownWriteTime": 1634584836,
+    "lastKnownWriteTime": 1634673375,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1634584836759,
+    "last_content_update": 1634673375938,
     "read_only": false,
     "read_only_alternatives": []
 }
