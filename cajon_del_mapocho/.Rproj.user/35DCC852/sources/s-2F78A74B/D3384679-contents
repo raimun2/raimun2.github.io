@@ -1,0 +1,6 @@
+con <- dbConnect("PostgreSQL", 
+                 dbname = "human-power",
+                 host = "studio-db.datalized.io", 
+                 port = 5432,
+                 user = "rsanchez", 
+                 password = "QHo3Fpt&345zMh")

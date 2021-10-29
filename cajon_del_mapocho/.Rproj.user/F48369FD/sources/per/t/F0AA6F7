@@ -1,22 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1632158096849.000,
-    "dirty" : false,
-    "encoding" : "ISO8859-1",
+    "created" : 1634911216148.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "53272966",
-    "id" : "89DE2248",
-    "lastKnownWriteTime" : 1627599378,
-    "last_content_update" : 1627599378,
+    "hash" : "1963837382",
+    "id" : "F0AA6F7",
+    "lastKnownWriteTime" : 1634911285,
+    "last_content_update" : 1634911341917,
     "path" : "C:/Users/Raimundo/Dropbox/Github/raimun2.github.io/cajon_del_mapocho/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
+        "cursorPosition" : "22,0",
+        "last_setup_crc32" : "BEA130CAd443fabe",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 2,
+    "relative_order" : 1,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"

@@ -1,0 +1,544 @@
+librerias = c("jsonlite", "geosphere", "RPostgreSQL", "plyr", "tidyverse", "dplyr", "googlesheets4", "googlesheets","lubridate")
+if (length(setdiff(librerias, rownames(installed.packages()))) > 0) 
+  install.packages(setdiff(librerias, rownames(installed.packages())))  
+lapply(librerias, library, character.only=T)
+
+####################################
+###         prender VPN          ###
+####################################
+
+#### Crear la conexion con la base de datos
+con <- dbConnect("PostgreSQL", 
+                 dbname = "human-power",
+                 host = "studio-db.datalized.io", 
+                 port = 5432,
+                 user = "rsanchez", 
+                 password = "QHo3Fpt&345zMh")
+### trae la data de los desafios activos no mas
+trae_desafio_activo = function(){
+  
+  datos_desafios <<- dbGetQuery(con, "SELECT * from challenge_challenge")
+  
+  datos_desafios <<- datos_desafios[as.Date(datos_desafios$end_date) > Sys.Date()-2, ]
+  
+  datos_userchalleng <<- dbGetQuery(con, paste0("SELECT * from challenge_userchallenge
+                                                where challenge_id in (",
+                                                paste(unique(datos_desafios$id),collapse=","),
+                                                ")")) 
+  
+  datos_usuarios <<- dbGetQuery(con, paste0("SELECT * from challenge_user 
+                                            where id in (",
+                                            paste(unique(datos_userchalleng$user_id),collapse=","),
+                                            ")")) 
+  
+  datos_usuarios$password = NULL
+  datos_usuarios <<- datos_usuarios[!is.na(datos_usuarios$json_data),]
+  
+  
+  actividades <<- dbGetQuery(con, paste0("SELECT * 
+                                        from challenge_activity 
+                                        where provider_id in (",
+                                         paste(unique(streams_HP$activity_id),collapse=","),
+                                         ")"))
+  
+
+  
+  
+  
+  streams_HP2  <-  dbGetQuery(con, "select  cu.uid,
+                                        ca.provider_id as activity_id,
+                                        cas.json_data->'time'->>'data' AS time_data
+                                        from challenge_activitystream cas
+                                        join challenge_activity ca on cas.activity_id = ca.id
+                                        join challenge_user cu on ca.user_id = cu.id
+                                        limit 100")
+  
+  streams_raw  <-  dbGetQuery(con, "select  * 
+                                        from challenge_activitystream cas
+                                        join challenge_activity ca on cas.activity_id = ca.id
+                                        join challenge_user cu on ca.user_id = cu.id
+                                        limit 10")
+  
+}
+
+trae_streams_BBDD <- function(){
+  
+  streams_HP  <-  dbGetQuery(con, "select  cu.uid,
+                                        ca.provider_id as activity_id,
+                                        cas.json_data->'time'->>'data' AS time_data,
+                                        cas.json_data->'distance'->>'data' AS distance_data,
+                                        cas.json_data->'latlng'->>'data' AS latlng_data,
+                                        cas.json_data->'altitude'->>'data' AS altitude_data,
+                                        cas.json_data->'heartrate'->>'data' AS heartrate_data,
+                                        cas.json_data->'cadence'->>'data' AS cadence_data,
+                                        cas.json_data->'watts'->>'data' AS watts_data,
+                                        cas.json_data->'temp'->>'data' AS temp_data,
+                                        cas.json_data->'moving'->>'data' AS moving_data
+                                        from challenge_activitystream cas
+                                        join challenge_activity ca on cas.activity_id = ca.id
+                                        join challenge_user cu on ca.user_id = cu.id")
+  
+  streams_raw <- NULL
+  for(act_id in maxis$id){
+    ##
+    substream <- streams_HP %>% filter(activity_id == act_id)
+    
+    time <- gsub("\\[|\\]"," ",substream$time_data) %>% str_split(",") %>% unlist() %>% as.numeric()
+    distance <- gsub("\\[|\\]"," ",substream$distance_data) %>% str_split(",") %>% unlist() %>% as.numeric()
+    elev <- gsub("\\[|\\]"," ",substream$altitude_data) %>% str_split(",") %>% unlist() %>% as.numeric()
+    heartrate <- gsub("\\[|\\]"," ",substream$heartrate_data) %>% str_split(",") %>% unlist() %>% as.numeric()
+    cadence <- gsub("\\[|\\]"," ",substream$cadence_data) %>% str_split(",") %>% unlist() %>% as.numeric()
+    moving <- gsub("\\[|\\]"," ",substream$moving_data) %>% str_split(",") %>% unlist() %>% toupper()
+    moving <- gsub(" ", "", moving) %>% as.logical()
+    
+    latlng <- gsub("\\[|\\]"," ",substream$latlng) %>% str_split(",") %>% unlist() %>% as.numeric()
+    
+    coords <- matrix(latlng, nrow = 2) %>% t() 
+    colnames(coords) <- c("lat", "lng")
+    
+    unzip_stream <- data.frame(act_id, time, coords, distance, elev, heartrate, cadence, moving)
+
+    streams_raw <- rbind(streams_raw, unzip_stream)
+  }
+  
+  
+}
+
+
+
+
+
+procesa_jsons = function(){
+  
+  datos_usuarios = datos_usuarios[!duplicated(datos_usuarios$uid),]
+  
+  ####################################
+  ########    DATA DESAFIOS    #######
+  ####################################
+  
+  variables_type = cbind("goal_type" = c("calories_burned", "total_time", "distance_traveled"),
+                         "goal_variable" =c("calories", "minutos", "distance"))
+  
+  desafios <<- merge(datos_desafios,variables_type,by="goal_type")
+  
+  ####################################
+  ########    DATA USUARIOS  #########
+  ####################################
+  
+  ### traigo todos los usuarios
+  
+  users <<- NULL
+  for(i in 1:nrow(datos_usuarios)) {
+    users <<- dplyr::bind_rows(users,
+                             datos_usuarios$json_data[i] %>% 
+                               jsonlite::fromJSON() %>% 
+                               unlist() %>% 
+                               t() %>% 
+                               as.data.frame())
+  }
+  
+  #users <<- cbind(datos_usuarios,users)
+  
+  
+  #### heigth wheigt birthdate viene vacio
+  
+  ####################################
+  ########    DATA ACTIVIDADES  ######
+  ####################################
+  ### ordeno dataframe con actividades
+  act_data = NULL
+  for(i in 180500:nrow(delta_actividades))
+  {
+    acti <- delta_actividades[i,]
+    actijson <- jsonlite::fromJSON(acti$json_data)
+    actijson$map = actijson$map$polyline
+    actijson$laps = NULL
+    actijson$gear = NULL
+    actijson$photos = NULL
+    actijson$athlete = actijson$athlete$id
+    actijson$splits_metric = NULL
+    actijson$splits_standard = NULL
+    actijson$segment_efforts = NULL
+    actijson$available_zones = NULL
+    actijson$best_efforts = NULL
+    actijson$similar_activities = NULL
+    act_data = dplyr::bind_rows(act_data, 
+                                as.data.frame(t(unlist(actijson))))
+  }
+  
+  act_data$user_id = delta_actividades$user_id
+  
+  act_data$start_date = as_datetime(act_data$start_date)
+  act_data$start_date_local = as_datetime(act_data$start_date_local)
+  act_data$calories = as.numeric(act_data$calories)
+  act_data$moving_time = as.numeric(act_data$moving_time)
+  act_data$elapsed_time = as.numeric(act_data$elapsed_time)
+  act_data$distance = as.numeric(act_data$distance)
+  act_data$total_elevation_gain = as.numeric(act_data$total_elevation_gain)
+  
+  act_data$fecha = as.Date(act_data$start_date)
+  act_data$semana = round_date(act_data$start_date_local, unit = "week")
+  
+  act_data$end_date =  act_data$start_date + act_data$elapsed_time
+  
+  act_data$Dispositivo = gsub("([A-Za-z]+).*", "\\1", act_data$device_name)
+  act_data$potencia = ifelse(act_data$moving_time>0,act_data$calories / act_data$moving_time,0)*60*60
+  
+  act_data$indoor = ifelse(is.na(act_data$elev_high) | (act_data$type ==  "VirtualRide"),"Indoor","Outdoor")
+  
+  act_data$minutos = act_data$moving_time / 60
+  
+  act_base <<- unique(act_data)
+}
+
+
+
+
+#### trae data de registro local y actualiza desde datalized
+carga_deltas = function(){
+  
+  datos_desafios <<- dbGetQuery(con, "SELECT * from challenge_challenge")
+  
+  
+  datos_userchalleng <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_userchallenge")) 
+  
+  
+  datos_usuarios <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_user"))
+  
+  datos_usuarios$password = NULL
+  datos_usuarios <<- datos_usuarios[!is.na(datos_usuarios$json_data),]
+  
+  
+  delta_actividades <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_activity 
+                                            where 
+                                            provider_start_date >= ",
+                                               "'",
+                                               max(datos_actividades$created_at), "'"))
+}
+
+#### fusiona las bases de actividades y desafios con los deltas
+fusiona_deltas = function(){
+
+  datos_usuarios = datos_usuarios[!duplicated(datos_usuarios$uid),]
+  
+  datos_actividades  <<- unique(dplyr::bind_rows(datos_actividades,delta_actividades))
+  
+  ####################################
+  ########    DATA DESAFIOS    #######
+  ####################################
+  
+  variables_type = cbind("goal_type" = c("calories_burned", "total_time", "distance_traveled"),
+                         "goal_variable" =c("calories", "minutos", "distance"))
+  
+  desafios <<- merge(datos_desafios,variables_type,by="goal_type")
+  
+  ####################################
+  ########    DATA USUARIOS  #########
+  ####################################
+  
+  ### traigo todos los usuarios
+  
+  users = NULL
+  for(i in 1:nrow(datos_usuarios)) {
+    users = dplyr::bind_rows(users,
+                             datos_usuarios$json_data[i] %>% 
+                               jsonlite::fromJSON() %>% 
+                               unlist() %>% 
+                               t() %>% 
+                               as.data.frame())
+  }
+  
+  users <<- cbind(datos_usuarios,users)
+  
+  
+  #### heigth wheigt birthdate viene vacio
+  
+  ####################################
+  ########    DATA ACTIVIDADES  ######
+  ####################################
+  ### ordeno dataframe con actividades
+  act_data = NULL
+  for(i in 1:nrow(delta_actividades))
+  {
+    acti = delta_actividades[i,]
+    actijson = jsonlite::fromJSON(acti$json_data)
+    actijson$map = actijson$map$polyline
+    actijson$laps = NULL
+    actijson$gear = NULL
+    actijson$photos = NULL
+    actijson$athlete = actijson$athlete$id
+    actijson$splits_metric = NULL
+    actijson$splits_standard = NULL
+    actijson$segment_efforts = NULL
+    actijson$available_zones = NULL
+    actijson$best_efforts = NULL
+    actijson$similar_activities = NULL
+    act_data = dplyr::bind_rows(act_data, 
+                                as.data.frame(t(unlist(actijson))))
+  }
+  
+  act_data$user_id = delta_actividades$user_id
+  
+  act_data$start_date = as_datetime(act_data$start_date)
+  act_data$start_date_local = as_datetime(act_data$start_date_local)
+  act_data$calories = as.numeric(act_data$calories)
+  act_data$moving_time = as.numeric(act_data$moving_time)
+  act_data$elapsed_time = as.numeric(act_data$elapsed_time)
+  act_data$distance = as.numeric(act_data$distance)
+  act_data$total_elevation_gain = as.numeric(act_data$total_elevation_gain)
+  
+  act_data$fecha = as.Date(act_data$start_date)
+  act_data$semana = round_date(act_data$start_date_local, unit = "week")
+  
+  act_data$end_date =  act_data$start_date + act_data$elapsed_time
+  
+  act_data$Dispositivo = gsub("([A-Za-z]+).*", "\\1", act_data$device_name)
+  act_data$potencia = ifelse(act_data$moving_time>0,act_data$calories / act_data$moving_time,0)*60*60
+  
+  act_data$indoor = ifelse(is.na(act_data$elev_high) | (act_data$type ==  "VirtualRide"),"Indoor","Outdoor")
+  
+  act_data$minutos = act_data$moving_time / 60
+  
+  act_base <<- dplyr::bind_rows(act_data,act_base)
+  
+  act_base <<- unique(act_base)
+}
+
+quitaduplicados = function(){
+  ## paso 1: detectar duplicidades
+  
+  ### primero identifico las fechas locales con mas de un registro para el mismo atleta
+  fechas_dobles = aggregate(calories~fecha+athlete,data=act_base,length)
+  ### dejo solo fechas con 2 mediciones para un sujeto
+  fechas_dobles = fechas_dobles[fechas_dobles$calories > 1,] 
+  
+  #validacion overlap total, exacto y parcial
+  dupes = NULL
+  for(i in 1:nrow(fechas_dobles)){
+    possibledupes = act_base[act_base$fecha == fechas_dobles$fecha[i] &
+                               act_base$athlete == fechas_dobles$athlete[i],]
+    
+    act_base = act_base[!(act_base$fecha == fechas_dobles$fecha[i] &
+                            act_base$athlete == fechas_dobles$athlete[i]),]
+    
+    possibledupes$over_tot = 1
+    possibledupes$over_exa = 1
+    possibledupes$over_par = 1
+    
+    for(j in 1:nrow(possibledupes)){
+      for(k in 1:nrow(possibledupes)){
+        
+        #check si tienen overlap total
+        if((possibledupes$start_date[j] > possibledupes$start_date[k] & 
+            possibledupes$end_date[j] < possibledupes$end_date[k])){
+          ## marcar la dominacion de K
+          possibledupes$over_tot[j] = 0
+        }
+        
+        #check si tienen overlap exacto
+        if(j!=k  & (possibledupes$start_date[j] == possibledupes$start_date[k] & 
+                    possibledupes$end_date[j] == possibledupes$end_date[k])){
+          ## marcar la dominacion de K
+          possibledupes$over_exa[j] = 0
+        }
+        
+        # check si tienen overlap parcial
+        if(j!=k  & possibledupes$over_tot[j] == 1 & possibledupes$start_date[j] < possibledupes$end_date[k] & 
+           possibledupes$start_date[j] > possibledupes$start_date[k]){
+          ## calcular overlap
+          possibledupes$over_par[j] = 1 - (as.numeric(possibledupes$end_date[k] - possibledupes$start_date[j])  / 
+                                             as.numeric(possibledupes$end_date[j] - possibledupes$start_date[j]))
+          
+        }     
+        
+      }
+    }
+    
+    
+    dupes = rbind(dupes,possibledupes)
+  }
+  
+  
+  dupes$pond = dupes$over_par*dupes$over_tot*dupes$over_exa
+  dupes$minutos = (dupes$pond)*dupes$minutos
+  #dupes = dupes[dupes$pond >0,]
+  act_base <<- rbind.fill(act_base,dupes)
+}
+
+#### calcula metricas para los reportes y lo sube a la base GSheets
+genera_dash = function(){
+  desafios_dash = NULL
+  for(i in 1:nrow(desafios)){
+    desafio = desafios[i,]
+    
+    usuarios_challenge = datos_userchalleng[datos_userchalleng$challenge_id %in% desafio$id,]
+    
+    act_data_challenge = act_base[(act_base$fecha >= as.Date(desafio$start_date) & 
+                                     act_base$fecha <= as.Date(desafio$end_date)), ]
+    
+    act_data_challenge = act_data_challenge[act_data_challenge$user_id %in% usuarios_challenge$user_id,]
+    
+    #Filtro 1: Seran consideradas actividades entre 60 segundos y 72 horas (deja afuera 1% de los outliers).
+    #Filtro 2: Solo ser?n consideradas actividades manuales bajo las 5000 calorias.
+    #Filtro 3: Solo ser?n consideradas actividades bajo las 6200 calorias por hora.
+    #Filtro 4: Cuando hay overlap parcial, la actividad que comenz? antes persiste completamente, y a la actividad que comenz? despues se le restan las calorias proporcionales al tiempo con overlap.
+    #Filtro 5: Cuando hay overlap total, persiste la actividad mas larga.
+    #Filtro 6: Cuando hay overlap exacto, persiste cualquier actividad.
+    
+    
+    act_data_challenge$kwh = act_data_challenge$calories*0.00116222
+    
+    #### esto es para KROSS NO MAS
+    # geo = act_data_challenge[act_data_challenge$type != "VirtualRide",
+    #                          c("map","user_id",
+    #                            "start_latlng1","start_latlng2",
+    #                            "end_latlng1","end_latlng2")]
+    # 
+    # geo = geo[!is.na(geo$start_latlng1),]
+    # 
+    # geo$dis_cura = distHaversine(cbind(-71.1686659,-33.3961382),
+    #                              cbind(as.numeric(geo$end_latlng2),
+    #                                    as.numeric(geo$end_latlng1)),
+    #                              r=6378)
+    # ####    ####      ####     ####     ####     ####     #### 
+    
+    ####
+    
+    challenge = data.frame(challenge= iconv(desafio$name, from = 'UTF-8', to = 'ASCII//TRANSLIT') )
+    
+    challenge$meta = desafio$goal
+    challenge$tipometa = desafio$goal_variable
+    challenge$duracion = as.numeric(desafio$end_date - desafio$start_date, unit="days")
+    
+    # N? participantes
+    challenge$participantes = length(unique(usuarios_challenge$user_id))
+    
+    if(nrow(act_data_challenge)>0){
+      act_data_challenge$variable = act_data_challenge[,c(as.character(challenge$tipometa))]
+      act_data_challenge = unique(act_data_challenge)
+      
+      resumen_atletas = aggregate(variable~athlete,act_data_challenge,sum)
+     # resumen_atletas = resumen_atletas[resumen_atletas$variable < quantile(resumen_atletas$variable,.99),]
+      
+      resumen_atletas2 = aggregate(variable~athlete,act_data_challenge,length)
+      
+      resumen_atletas$total_activities = resumen_atletas2$variable
+      
+      
+      resumen_atletas = merge(resumen_atletas,users[,c("id","sex")],by.x="athlete",by.y="id",all.x=T)
+      
+      #resumen_atletas$variable = resumen_atletas[,c(as.character(desafio$goal_type))]
+      
+      # average ride to achieve
+      challenge$avg_acts = max(0,mean(resumen_atletas$total_activities[resumen_atletas$variable >= desafio$goal],0),na.rm = T)
+      
+      # max ride to achieve
+      challenge$max_acts = max(resumen_atletas$total_activities[resumen_atletas$variable >= desafio$goal ],0)
+      
+      # min ride to achieve
+      
+      challenge$min_acts = min(resumen_atletas$total_activities[resumen_atletas$variable >= desafio$goal ],challenge$max_acts)
+      
+      # torta completed
+      challenge$completion = length(resumen_atletas$total_activities[resumen_atletas$variable > desafio$goal]) / challenge$participantes
+      challenge$incompletion = 1 - challenge$completion
+      
+      # indoor share ### mantuve el nombre, pero es curacavi share
+      challenge$indoor_share =  1#   sum((geo$dis_cura < 35))/nrow(act_data_challenge)
+
+      challenge$outdoor_share = 1 - challenge$indoor_share
+      
+      # numero de ganarores de la medalla
+      challenge$medallas = length(resumen_atletas$total_activities[resumen_atletas$variable >= desafio$goal]) 
+      
+      
+      challenge$kwh = sum(act_data_challenge$kwh)
+      # top3 calorias by gender
+      
+      challenge$calories = sum(act_data_challenge$calories)
+      
+      resumen_atletas = resumen_atletas[!is.na(resumen_atletas$sex),]
+      
+      hombres = c(0,0,0,resumen_atletas$variable[resumen_atletas$sex == "M"])
+      toph = hombres[hombres > quantile(hombres,1-3/length(hombres))]
+      toph = toph[order(-toph)]
+      toph = c(toph,0,0,0)
+      
+      mujeres = c(0,0,0,resumen_atletas$variable[resumen_atletas$sex == "F"])
+      topm = mujeres[mujeres > quantile(mujeres,1-4/length(mujeres))]
+      topm = topm[order(-topm)]
+      topm = c(topm,0,0,0)
+      # colective calorias of top 10 finishers
+      
+      challenge$top1M = toph[1]
+      challenge$top2M = toph[2]
+      challenge$top3M = toph[3]
+      challenge$top1F = topm[1]
+      challenge$top2F = topm[2]
+      challenge$top3F = topm[3]
+      
+      challenge$total = sum(resumen_atletas$variable)
+      
+      challenge$top10 = sum(resumen_atletas$variable[resumen_atletas$variable > quantile(resumen_atletas$variable,1-10/length(resumen_atletas$variable))])
+      
+      challenge2 = challenge
+      challenge2$completion = challenge2$incompletion
+      
+      challenge2$indoor_share = challenge2$outdoor_share
+      
+      challenge2$outdoor_share = NULL
+      challenge2$incompletion = NULL
+      challenge$outdoor_share = NULL
+      challenge$incompletion = NULL
+      
+      challenge = rbind(challenge,challenge2)
+    }
+    
+    desafios_dash = rbind.fill(desafios_dash,challenge)
+  }
+  
+  desafios_dash$nrow = 1:nrow(desafios_dash)
+  
+  write_sheet(desafios_dash,
+              as_sheets_id("1czz_gJJc86vHm1jOA4t_isPdo74CyxIFHjVuA30hlCs"),
+              sheet="act_data")
+}
+
+#### guarda bases de reportes en ubicacion local
+respalda_local = function(){
+  saveRDS(datos_usuarios,
+          "data/datos_usuarios.RData")
+  saveRDS(datos_desafios,
+          "data/datos_desafios.RData")
+  saveRDS(datos_actividades,
+          "data/datos_actividades.RData")
+  saveRDS(datos_userchalleng,
+          "data/datos_userchalleng.RData")
+  saveRDS(act_base,"data/act_base.RData")
+}
+
+## TRAE TODO NUEVAMENTE
+refresca_base = function(){
+  
+  datos_desafios <<- dbGetQuery(con, "SELECT * from challenge_challenge")
+  
+  datos_userchalleng <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_userchallenge"))
+  
+  datos_usuarios <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_user"))
+  
+  datos_usuarios$password = NULL
+  datos_usuarios <<- datos_usuarios[!is.na(datos_usuarios$json_data),]
+  
+  
+  delta_actividades <<- dbGetQuery(con, paste0("SELECT * 
+                                            from challenge_activity"))
+  
+  datos_actividades <<- NULL
+  act_base <<- NULL
+
+}

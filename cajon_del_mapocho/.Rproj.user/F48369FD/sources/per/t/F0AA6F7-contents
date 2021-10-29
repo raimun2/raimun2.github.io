@@ -157,7 +157,9 @@ ggplot() +
 
 ## Hitos de la ruta
 
-### Puente Ñilhue (Km 0 - Km 87)
+<button class="btn btn-primary" data-toggle="collapse" data-target="#BlockName"> ### Puente Ñilhue (Km 0 - Km 87) </button>  
+<div id="BlockName" class="collapse">  
+
 
 La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
 
@@ -166,6 +168,11 @@ Este acceso a la cordillera ha servido de lugar de iniciación en el montañismo
 Nuestro primer tramo lleva desde puente Ñilhue hacia el cerro Pochoco. Para subir al Pochoco, a 200 metros de la partida, hay que hacer la primera locura de esta ruta y se debe saltar a una canaleta para poder [subirse al filo del cerro](https://www.strava.com/segments/26514649). 
 
 Esta ruta informal la conocí gracias a mi amigo [Matt Maynard](https://matt-maynard.com/), un especialista en encontrar pasadas libres a nuestras montañas. Al llegar a la cumbre del Pochoco se sigue a la loma de la vaca para llegar finalmente al corral Llanos de Javier.
+
+</div>
+
+
+
 
 ### Corral Llanos de Javier (Km 9.5)
 
