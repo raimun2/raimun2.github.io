@@ -147,8 +147,7 @@ procesa_jsons = function(){
   ####################################
   ### ordeno dataframe con actividades
   act_data = NULL
-  for(i in 180500:nrow(delta_actividades))
-  {
+  for(i in 1:nrow(delta_actividades))  {
     acti <- delta_actividades[i,]
     actijson <- jsonlite::fromJSON(acti$json_data)
     actijson$map = actijson$map$polyline

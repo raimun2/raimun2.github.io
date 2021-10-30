@@ -4,7 +4,7 @@ author: "Raimundo Sánchez"
 output: html_document
 ---
 
-El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los picunches e incas habitaban el valle central de Chile. 
+El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los pueblos picunches e incas habitaron el valle central de Chile. 
 
 Sus aguas nacen desde la base del Cerro el Plomo, o Apu Wamani, protector de este valle del Mapocho, el cual ha sido visitado por los habitantes de esta zona desde tiempos inmemoriales. 
 
@@ -14,7 +14,7 @@ La ruta el Cajón del Mapocho recorre algunos de estos hitos, conectando en un c
 
 Personalmente, armé esta ruta porque disfruto de correr por los cerros, de la ultradistancia y del desafío de la resistencia humana. Además como habitante de este valle, muchos de estos hitos me conectan con mi historia, mis recuerdos, mi familia y el territorio. 
 
-El primer intento de esta ruta fue completado el 20 de Noviembre de 2020 por René Castel, Benjamin Perez y Raimundo Sánchez en modo autosuficiencia, en un tiempo de 17 horas y 44 minutos. 
+El primer intento de esta ruta fue completado el [20 de Noviembre de 2020](https://www.strava.com/activities/4367078150) por René Castel, Benjamin Perez y Raimundo Sánchez en modo autosuficiencia, en un tiempo de 17 horas y 44 minutos. El próximo intento está programado para el viernes 17 de diciembre de 2021.
 
 
 ```{r setup, include=FALSE}
@@ -158,96 +158,122 @@ ggplot() +
 ## Tramos de la ruta
 
 <details>
-  <summary> Puente Ñilhue - Corral Llanos de Javier (Km 0 - Km 9.5) </summary>
+  <summary> Tramo 1: Puente Ñilhue - Corral Llanos de Javier (Km 0 - Km 9.5) </summary>
 
 La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
 
 Este acceso a la cordillera ha servido de lugar de iniciación en el montañismo a diversas generaciones de Santiaguinos, y muchos desconocen que hacia el norte se puede subir el Cerro Pochoco, otro cerro clásico que normalmente se sube desde el sector del Arrayán. 
 
-Nuestro primer tramo lleva desde puente Ñilhue hacia el cerro Pochoco. Para subir al Pochoco, a 200 metros de la partida, hay que hacer la primera locura de esta ruta y se debe saltar a una canaleta para poder [subirse al filo del cerro](https://www.strava.com/segments/26514649). 
+Nuestro primer tramo lleva desde puente Ñilhue hacia el cerro Pochoco. Para subir al Pochoco, a 200 metros de la partida, hay que hacer la primera locura de esta ruta y se debe saltar a una canaleta para poder [subirse al filo del cerro](https://www.strava.com/segments/26514649).
 
-Esta ruta informal la conocí gracias a mi amigo [Matt Maynard](https://matt-maynard.com/), un especialista en encontrar pasadas libres a nuestras montañas. Al llegar a la cumbre del Pochoco se sigue a la loma de la vaca para llegar finalmente al corral Llanos de Javier.
+Esta ruta informal la conocí gracias a mi amigo [Matt Maynard](https://matt-maynard.com/), un especialista en encontrar pasadas libres a nuestras montañas. La primera parte es bien trabada, y no hay un sendero muy claro, pero luego de subir unos 300 metros de desnivel se empalma con un camino vehicular que sube en zig-zag hasta la cumbre.
 
-</details>
-
-<details>
-  <summary> Corral Llanos de Javier - Corral Quemado (Km 9.5 - Km 22) </summary>
+Al llegar a la cumbre del Pochoco se sigue subiendo por un sendero hacia la loma de la vaca y desde ahi se continua por el filo para llegar finalmente al corral Llanos de Javier. 
 
 Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en medio de la montaña la cual se eleva por sobre los 1840 msnm y conecta senderos provenientes desde el Pochoco, del Santuario de la Naturaleza del Arrayán y desde Los Maitenes. 
 
-El segundo tramo sube desde Llanos de Javier hasta los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas. Luego de llegar a los Maitenes desciende 1 kilómetro por el camino vehicular hasta Corral Quemado.
-
 </details>
+<p>
 
 <details>
-  <summary> Corral Quemado - La Parva (Km 22 - Km 33.5) </summary>
+  <summary> Tramo 2: Corral Llanos de Javier - Corral Quemado (Km 9.5 - Km 22) </summary>
+
+El segundo tramo sube desde Llanos de Javier hacia el cerro Boniguita, donde se encuentran unas torres de alta tension. Desde este punto se puede divisar el cerro Canoitas hacia el norte, y se desciende hacia los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas.
+
+La ruta está bien marcada y es el primer tramo totalmente corrible de esta ruta. Luego de llegar a los Maitenes se desciende 3 kilometros por el camino a la disputada en dirección a Corral Quemado.
+
+</details>
+<p>
+
+<details>
+  <summary> Tramo 3: Corral Quemado - La Parva (Km 22 - Km 33.5) </summary>
   
 En este punto se bifurca la via proveniente desde Santiago en 2 caminos, uno hacia los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo. 
 
-La ruta sigue desde este punto hacia la Parva, atravesando las curvas hasta Villa Paulina, y luego sube por el filo hasta el centro de Ski que se encuentra en las laderas del cerro que lleva el mismo nombre.
+Este es un punto estrategico ya que da comienzo a uno de los tramos de mayor desnivel positivo, y es un buen punto para esconder un dropbag con algo de agua, para alivianar la carga desde la partida. 
+
+La ruta sigue desde este punto hacia la Parva, atravesando las curvas hasta Villa Paulina, y luego sube por el filo hasta el centro de Ski que se encuentra en las laderas del cerro que lleva el mismo nombre. 
+
+Justo antes de llegar a La Parva se atraviesan algunos arroyos, lo que consituye el primer punto natural de hidratacion de la ruta, luego de cerca de 30 kilometros y 3500 metros de desnivel positivo. 
 
 </details>
+<p>
 
 <details>
-  <summary> La Parva - Cancha de Carreras (Km 33.5 - Km 42) </summary>
+  <summary> Tramo 4: La Parva - Cancha de Carreras (Km 33.5 - Km 42) </summary>
 
 En este centro de Ski recibe visitantes todo el invierno, pero en el verano también, siendo un lugar frecuentado por montañistas que se aventuran a hacer cumbres como el cerro Pintor, Leonera, o el Plomo. 
 
-Quienes han hecho la ruta del Cajón del Mapocho dicen que mentalmente la ruta comienza en La Parva. Este es el primer punto con agua después de comenzar, y es el lugar perfecto para recargar energía, ajustar equipamiento y dar comienzo a la sección de alta montaña. 
+Quienes han hecho la ruta del Cajón del Mapocho dicen que mentalmente el desafío comienza en La Parva. Este es el primer punto con baños después de comenzar, y es el lugar perfecto para recargar energía, ajustar equipamiento y dar comienzo a la sección de alta montaña. 
 
 Subiendo desde el campamento Doite ubicado en la base del andarivel Las Águilas del centro de Ski, se pasa por la laguna Piuquenes, y los cerros Falsa Parva, Parva y Pintor, para eventualmente llegar a una extensa planicie de altura llamada Cancha de Carreras.
 
 </details>
+<p>
 
 <details>
-  <summary> Cancha de Carreras - Campamento Federacion (Km 42 - Km 45.5) </summary>
+  <summary> Tramo 5: Cancha de Carreras - Campamento Federación (Km 42 - Km 45.5) </summary>
   
-
 
 Esta planicie tiene una meseta rectangular que la cultura popular también llama ovnipuerto, a 4150 msnm. En esta sección es común encontrarse con nieve hasta los meses de primavera, por lo que si desean hacer un tiempo rápido se recomienda intentar la ruta en el verano. 
 
 Desde Cancha de Carreras sigue la ruta hacia el cerro Leonera, pero luego de un par de kilómetros se alcanza el punto más alto de la ruta a 4320 (msnm) donde hay que tomar un desvío para comenzar a descender hacia el oriente, bajando por la falda del cerro Leonera hasta el Campamento Federación.
 
+La sección entre Cancha de Carreras y el Campamento Federación corresponde al segmento mas corto pero tambien mas técnico de nuestra ruta, por su altitud y por la pasada por el filo del Leonera.
+
 
 </details>
+<p>
 
 <details>
-  <summary> Campamento Federacion - Piedra Numerada (Km 45.5 - Km 51) </summary>
+  <summary> Tramo 6: Campamento Federacion - Piedra Numerada (Km 45.5 - Km 51) </summary>
   
+El campamento Federacion se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano.  Desde Federación aún quedan 42 kilómetros de descenso para llegar a la meta. 
 
-Este campamento se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano. La sección entre Cancha de Carreras y el Campamento Federación corresponde al segmento mas técnico de nuestra ruta. Desde Federación aún quedan 42 kilómetros de descenso para llegar a la meta.
+El descenso continúa por un sendero de alta montaña, bien marcado, desde Federación hasta Piedra numerada. 
+
+Este característico hito de la cordillera es un sector intermedio para los montañistas que visitan la zona, y se puede acceder desde Valle Nevado o La Parva. Este sector fue utilizado por los incas para como estación de descanso en el camino hacia la cumbre del Plomo.
+
+En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo, el cual proveerá de agua durante el resto de la ruta hasta el kilometro 77. 
+
 
 </details>
+<p>
 
 <details>
-  <summary> Piedra Numerada - Refugio del Cepo (Km 51 - Km 63.5) </summary>
+  <summary> Tramo 7: Piedra Numerada - Refugio del Cepo (Km 51 - Km 63.5) </summary>
   
+En Piedra Numerada hay que tomar un desvío para continuar junto al rio, ya que la ruta mas frecuentada se devuelve hacia los centros de Ski. 
 
-El descenso continúa desde Federación hasta Piedra numerada, característico hito de la cordillera que es un sector intermedio para los montañistas que visitan la zona, y se puede acceder desde Valle Nevado o La Parva. Este sector fue utilizado por los incas para como estación de descanso en el camino hacia la cumbre del Plomo.
+En este punto es clave tomar la decisión si seguir en ruta, o si aborta misión y se devuelve hacia La Parva, la cual está a 8 kilómetros.
 
-En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo. En Piedra Numerada hay que tomar un desvío para continuar junto al rio, ya que la ruta mas frecuentada se devuelve hacia los centros de Ski. 
-
-En este punto es clave tomar la decisión si seguir en ruta, o si aborta misión y se devuelve hacia La Parva, la cual está a 4 kilómetros. 
-
-</details>
-
-<details>
-  <summary> Refugio del Cepo - La Ermita (Km 63.5 - Km 81.5)  </summary>
-
+El tramo entre piedra numerada y el refugio del Cepo sigue el curso del rio Cepo, y el rastro humano se pierde casi completamente. Dado esto, es dificil identificar la mejor huella, y suelen haber senderos de animales a ambos lados del rio. 
 
 Si continúa bajando por el rio Cepo, luego de varios kilómetros llega a un refugio de arrieros ubicado en la profundidad del cajón, en la orilla norte del rio. Este refugio se puede divisar desde el camino a Valle Nevado, y es uno de los pocos hitos de evidencia humana en este sector del valle. 
 
-Un poco más abajo del refugio, el rio Cepo se junta con otros afluentes para transformarse en el rio Molina. En este tramo el cajón se va angostando y la ruta de los arrieros ancestrales fue optimizada con 7 cruces al rio antes de mantenerse por la ladera sur. En estos cruces es necesario llevar bastones debido a la fuerza del caudal.
-
 </details>
+<p>
 
 <details>
-  <summary> La Ermita - Puente Ñilhue (Km 81.5 - Km 87)  </summary>
+  <summary> Tramo 8: Refugio del Cepo - La Ermita (Km 63.5 - Km 81.5)  </summary>
 
+Al refugio del rio Cepo se puede llegar desde el camino a Valle nevado tambien, existieno un par de rutas de escape en caso de tener contratiempos. 
 
-Luego de los cruces del rio se llega a Antahuaya, un centro de eventos en la montaña, para después llegar a la Ermita donde el rio Molina se junta con el rio San Francisco para dar vida al rio Mapocho.
+Un poco más abajo del refugio, el rio Cepo se junta con otros afluentes para transformarse en el rio Molina. 
 
-La Ermita es el último hito de la ruta, donde luego de 6 kilómetros por un camino de tierra se llega de vuelta al punto de origen, el puente Ñilhue.
+En este tramo el cajón se va angostando y la ruta de los arrieros ancestrales fue optimizada con 7 cruces al rio antes de mantenerse por la ladera sur. En estos cruces es necesario llevar bastones debido a la fuerza del caudal.
+
+Luego del ultimo cruce del rio Molina en el kilometro 77 se llega a Antahuaya, un centro de eventos en la montaña y ya se empieza a olfatear la civilizacion. Luego de 4 kilometros por caminos vehiculares se llega a la Ermita donde el rio Molina se junta con el rio San Francisco para dar vida al rio Mapocho. 
+
+</details>
+<p>
+
+<details>
+  <summary> Tramo 9: La Ermita - Puente Ñilhue (Km 81.5 - Km 87)  </summary>
+
+La Ermita es el último hito de la ruta y corresponde a un lugar de encuentro para deportistas de montaña, especialmente ciclistas que suben al cajon durante todo el año. 
+
+Luego de 6 kilómetros por un camino vehicular de tierra que va por la orilla sur del cajón se llega de vuelta al punto de origen, el puente Ñilhue.
 
 </details>
 
@@ -255,4 +281,3 @@ La Ermita es el último hito de la ruta, donde luego de 6 kilómetros por un cam
 
 ### [Tabla de Distancias](https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit#gid=0) 
 
-### Próximo intento: viernes 17 de diciembre de 2021
