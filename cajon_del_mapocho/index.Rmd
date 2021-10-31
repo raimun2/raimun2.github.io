@@ -6,7 +6,7 @@ output: html_document
 
 ********
 
-El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los pueblos picunches e incas habitaron el valle central de Chile. 
+El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los pueblos picunches e incas se asentaron en este valle central de Chile. 
 
 Sus aguas nacen desde la base del Cerro el Plomo, o Apu Wamani, protector de este valle del Mapocho, el cual ha sido visitado por los habitantes de esta zona desde tiempos inmemoriales. 
 
