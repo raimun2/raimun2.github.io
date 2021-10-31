@@ -288,7 +288,7 @@ Luego de 6 kilómetros por un camino vehicular de tierra que va por la orilla su
 
 ********
 
-### Tabla de Distancias
+### [Tabla de Distancias](https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing)
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
 library(DT)
