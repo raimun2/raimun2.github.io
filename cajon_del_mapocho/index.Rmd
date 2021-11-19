@@ -10,7 +10,6 @@ output:
     theme: journal
 ---
 
-********
 
 El rio Mapocho sin duda es un ícono de la geografía de Santiago, donde sus aguas han dado forma a nuestra ciudad desde que los pueblos picunches e incas se asentaron en este valle central de Chile. 
 
@@ -116,13 +115,11 @@ tramo9sp <- tramo9 %>% select(lon,lat) %>%
 
 ```
 
-******* 
 
 #### Distancia total:        87 km
 
 #### Desnivel positivo:    5100 m
 
-*******
 
 ## Mapa y perfil de elevación
 
@@ -148,7 +145,6 @@ leaflet(width = '100%') %>%
           ) 
 ```
 
-********
 
 ```{r, fig.width=12, fig.height=4, echo=FALSE}
 
@@ -164,12 +160,12 @@ ggplot() +
   scale_x_continuous(breaks=seq(0, 87, 5))
 ```
 
-*****
 
 ###  Tramos de la ruta
 
 
 ## Tramo 1: Puente Ñilhue - Corral Llanos de Javier 
+
 ### [(Km 0 - Km 9.5)](https://www.strava.com/segments/26514256)
 
 La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
@@ -185,6 +181,7 @@ Al llegar a la cumbre del Pochoco se sigue subiendo por un sendero hacia la loma
 Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en medio de la montaña la cual se eleva por sobre los 1840 msnm y conecta senderos provenientes desde el Pochoco, del Santuario de la Naturaleza del Arrayán y desde Los Maitenes. 
 
 ## Tramo 2: Corral Llanos de Javier - Corral Quemado 
+
 ### [(Km 9.5 - Km 22)](https://www.strava.com/segments/26514275)
 
 El segundo tramo sube desde Llanos de Javier hacia el cerro Boniguita, donde se encuentran unas torres de alta tension. Desde este punto se puede divisar el cerro Canoitas hacia el norte, y la ruta desciende hacia los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas.
@@ -192,6 +189,7 @@ El segundo tramo sube desde Llanos de Javier hacia el cerro Boniguita, donde se 
 La ruta está bien marcada y es el primer tramo totalmente corrible de esta ruta. Luego de llegar a los Maitenes se desciende 3 kilometros por el camino a la disputada en dirección a Corral Quemado.
 
 ## Tramo 3: Corral Quemado - La Parva 
+
 ### [(Km 22 - Km 33.5)](https://www.strava.com/segments/26514318)
   
 En este punto se bifurca la via proveniente desde Santiago en 2 caminos, uno hacia los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo. 
@@ -273,11 +271,9 @@ Luego de 6 kilómetros por un camino vehicular de tierra que va por la orilla su
 
 </details>
 
-*******
 
 ## [GPX de la ruta](./cajon_del_mapocho.gpx) 
 
-********
 
 ## [Tabla de Distancias](https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing)
 
