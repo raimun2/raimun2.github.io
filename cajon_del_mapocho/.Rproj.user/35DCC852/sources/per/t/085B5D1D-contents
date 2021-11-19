@@ -1,7 +1,13 @@
 ---
 title: "Cajón del Mapocho"
 author: "por @raimun2"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 2
+    theme: journal
 ---
 
 ********
@@ -118,7 +124,7 @@ tramo9sp <- tramo9 %>% select(lon,lat) %>%
 
 *******
 
-### Mapa y perfil de elevación
+## Mapa y perfil de elevación
 
 ```{r, echo=FALSE}
 
@@ -160,10 +166,11 @@ ggplot() +
 
 *****
 
-## Tramos de la ruta
+###  Tramos de la ruta
 
-<details>
-  <summary> Tramo 1: Puente Ñilhue - Corral Llanos de Javier [(Km 0 - Km 9.5)](https://www.strava.com/segments/26514256) </summary>
+
+## Tramo 1: Puente Ñilhue - Corral Llanos de Javier 
+### [(Km 0 - Km 9.5)](https://www.strava.com/segments/26514256)
 
 La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
 
@@ -177,21 +184,15 @@ Al llegar a la cumbre del Pochoco se sigue subiendo por un sendero hacia la loma
 
 Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en medio de la montaña la cual se eleva por sobre los 1840 msnm y conecta senderos provenientes desde el Pochoco, del Santuario de la Naturaleza del Arrayán y desde Los Maitenes. 
 
-</details>
-<p>
-
-<details>
-  <summary> Tramo 2: Corral Llanos de Javier - Corral Quemado [(Km 9.5 - Km 22)](https://www.strava.com/segments/26514275) </summary>
+## Tramo 2: Corral Llanos de Javier - Corral Quemado 
+### [(Km 9.5 - Km 22)](https://www.strava.com/segments/26514275)
 
 El segundo tramo sube desde Llanos de Javier hacia el cerro Boniguita, donde se encuentran unas torres de alta tension. Desde este punto se puede divisar el cerro Canoitas hacia el norte, y la ruta desciende hacia los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas.
 
 La ruta está bien marcada y es el primer tramo totalmente corrible de esta ruta. Luego de llegar a los Maitenes se desciende 3 kilometros por el camino a la disputada en dirección a Corral Quemado.
 
-</details>
-<p>
-
-<details>
-  <summary> Tramo 3: Corral Quemado - La Parva [(Km 22 - Km 33.5)](https://www.strava.com/segments/26514318) </summary>
+## Tramo 3: Corral Quemado - La Parva 
+### [(Km 22 - Km 33.5)](https://www.strava.com/segments/26514318)
   
 En este punto se bifurca la via proveniente desde Santiago en 2 caminos, uno hacia los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo. 
 
@@ -201,11 +202,9 @@ La ruta sigue desde este punto hacia la Parva, atravesando las curvas hasta Yerb
 
 Justo antes de llegar a La Parva se atraviesan algunos arroyos, lo que sería el primer punto natural de hidratación de la ruta, luego de cerca de 30 kilómetros y 3500 metros de desnivel positivo. 
 
-</details>
-<p>
+## Tramo 4: La Parva - Cancha de Carreras 
 
-<details>
-  <summary> Tramo 4: La Parva - Cancha de Carreras [(Km 33.5 - Km 42)](https://www.strava.com/segments/26514349) </summary>
+### [(Km 33.5 - Km 42)](https://www.strava.com/segments/26514349)
 
 En este centro de Ski recibe visitantes todo el invierno, pero en el verano también, siendo un lugar frecuentado por montañistas que se aventuran a hacer cumbres como el cerro Pintor, Leonera, o el Plomo. 
 
@@ -213,11 +212,9 @@ Quienes han hecho la ruta del Cajón del Mapocho dicen que mentalmente el desaf�
 
 Subiendo desde el campamento Doite ubicado en la base del andarivel Las Águilas del centro de Ski, se pasa por la laguna Piuquenes, y se rodean los cerros Falsa Parva, Parva y Pintor, para eventualmente llegar a una extensa planicie de altura llamada Cancha de Carreras.
 
-</details>
-<p>
+## Tramo 5: Cancha de Carreras - Campamento Federación 
 
-<details>
-  <summary> Tramo 5: Cancha de Carreras - Campamento Federación [(Km 42 - Km 45.5)](https://www.strava.com/segments/26514787) </summary>
+### [(Km 42 - Km 45.5)](https://www.strava.com/segments/26514787) 
   
 
 Esta planicie tiene una meseta rectangular que la cultura popular también llama ovnipuerto, a 4150 msnm. En esta sección es común encontrarse con nieve hasta los meses de primavera, por lo que si desean hacer un tiempo rápido se recomienda intentar la ruta en el verano. 
@@ -227,11 +224,9 @@ Desde Cancha de Carreras sigue la ruta hacia el cerro Leonera, pero luego de un 
 La sección entre Cancha de Carreras y el Campamento Federación corresponde al segmento mas corto pero también mas técnico de nuestra ruta, por su altitud y por la pasada por el filo del Leonera.
 
 
-</details>
-<p>
+## Tramo 6: Campamento Federacion - Piedra Numerada 
 
-<details>
-  <summary> Tramo 6: Campamento Federacion - Piedra Numerada [(Km 45.5 - Km 51)](https://www.strava.com/segments/26514412) </summary>
+### [(Km 45.5 - Km 51)](https://www.strava.com/segments/26514412) 
   
 El campamento Federación se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano. Desde Federación aún quedan 42 kilómetros de descenso para llegar a la meta. 
 
@@ -242,11 +237,9 @@ Este característico hito de la cordillera es un sector intermedio para los mont
 En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo, el cual proveerá de agua durante el resto de la ruta hasta el kilómetro 77. 
 
 
-</details>
-<p>
+## Tramo 7: Piedra Numerada - Refugio del Cepo 
 
-<details>
-  <summary> Tramo 7: Piedra Numerada - Refugio del Cepo [(Km 51 - Km 63.5)](https://www.strava.com/segments/26514447) </summary>
+### [(Km 51 - Km 63.5)](https://www.strava.com/segments/26514447) 
   
 En Piedra Numerada hay que tomar un desvío para continuar junto al rio, ya que la ruta mas frecuentada se devuelve hacia los centros de Ski. 
 
@@ -256,11 +249,9 @@ El tramo entre piedra numerada y el refugio del Cepo sigue el curso del rio Cepo
 
 Si continúa bajando por el rio Cepo, luego de varios kilómetros llega a un refugio de arrieros ubicado en la profundidad del cajón, en la orilla norte del rio. Este refugio se puede divisar desde el camino a Valle Nevado, y es uno de los pocos hitos de evidencia humana en este sector del valle. 
 
-</details>
-<p>
+## Tramo 8: Refugio del Cepo - La Ermita 
 
-<details>
-  <summary> Tramo 8: Refugio del Cepo - La Ermita [(Km 63.5 - Km 81.5)](https://www.strava.com/segments/26514483)  </summary>
+### [(Km 63.5 - Km 81.5)](https://www.strava.com/segments/26514483)
 
 Al refugio del rio Cepo se puede llegar desde el camino a Valle nevado también, por lo que se tiene un par de rutas de escape en caso de tener contratiempos. 
 
@@ -272,11 +263,9 @@ Dado que los cruces del rio pueden ser complejos, y a esta altura ya se llevan m
 
 Luego del ultimo cruce del rio Molina en el kilometro 77 se llega a Antahuaya, un centro de eventos en la montaña y ya se empieza a olfatear la civilizacion. Luego de 4 kilometros por caminos vehiculares se llega a la Ermita donde el rio Molina se junta con el rio San Francisco para dar nombre al rio Mapocho. 
 
-</details>
-<p>
+## Tramo 9: La Ermita - Puente Ñilhue 
 
-<details>
-  <summary> Tramo 9: La Ermita - Puente Ñilhue [(Km 81.5 - Km 87)](https://www.strava.com/segments/26514504)  </summary>
+[(Km 81.5 - Km 87)](https://www.strava.com/segments/26514504)
 
 La Ermita es el último hito de la ruta y corresponde a un lugar de encuentro para deportistas de montaña, especialmente ciclistas que suben al cajón durante todo el año. 
 
@@ -286,15 +275,21 @@ Luego de 6 kilómetros por un camino vehicular de tierra que va por la orilla su
 
 *******
 
-### [GPX de la ruta](./cajon_del_mapocho.gpx) 
+## [GPX de la ruta](./cajon_del_mapocho.gpx) 
 
 ********
 
-### [Tabla de Distancias](https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing)
+## [Tabla de Distancias](https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing)
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}
 library(DT)
 library(googlesheets4)
+library(googledrive)
+
+options(gargle_oauth_cache = ".secrets")
+drive_auth(cache = ".secrets", email = "raimundosanchezu@gmail.com")
+gs4_auth(token = drive_token())
+
 
 tabla_dist <- read_sheet("https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing")
 tabla_dist$`Tiempo 2020` <- substr(as.character(tabla_dist$`Tiempo 2020`),12,22)
