@@ -1,8 +1,0 @@
-"0","tabla_dist <- read_sheet(""https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing"")
-"
-"2","Error: [38;5;232mClient error: (403) PERMISSION_DENIED
-* Client does not have sufficient permission. This can happen because the OAuth token does not have the right scopes, the client
-  doesn't have permission, or the API has not been enabled for the client project.
-* Request had insufficient authentication scopes.[39m
-[90mRun `rlang::last_error()` to see where the error occurred.[39m
-"
