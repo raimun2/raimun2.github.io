@@ -43,7 +43,7 @@ ruta_sp <- SpatialPointsDataFrame(data=ruta_strm,
                                   proj4string=CRS("+proj=longlat +datum=WGS84"))
 
 
-PCS <- c(9.65, 22.05, 33.35, 42.05, 45.7, 50.82, 63.5, 81.55, 87.7)
+PCS <- c(9.65, 22.05, 33.35, 42.05, 45.7, 50.82, 63.5, 81.55, 87.7)*1000
 
 colores <- brewer.pal(n = 9, name = "Paired")
 

@@ -1,0 +1,25 @@
+"0","tabla <- data.frame( ""Tramo"" = c(""Tramo 1"",""Tramo 2"",""Tramo 3"",""Tramo 4"",""Tramo 5"",""Tramo 6"",""Tramo 7"",""Tramo 8"",""Tramo 9"",""Total""),
+                     ""Distancia"" = c(sum(tramo1$delta_distance),
+                                     sum(tramo2$delta_distance),
+                                     sum(tramo3$delta_distance),
+                                     sum(tramo4$delta_distance),
+                                     sum(tramo5$delta_distance),
+                                     sum(tramo6$delta_distance),
+                                     sum(tramo7$delta_distance),
+                                     sum(tramo8$delta_distance),
+                                     sum(tramo9$delta_distance),
+                                     sum(ruta_strm$delta_distance)),
+                      ""ElevGain"" =  c(sum(tramo1$dplus),
+                                      sum(tramo2$dplus),
+                                      sum(tramo3$dplus),
+                                      sum(tramo4$dplus),
+                                      sum(tramo5$dplus),
+                                      sum(tramo6$dplus),
+                                      sum(tramo7$dplus),
+                                      sum(tramo8$dplus),
+                                      sum(tramo9$dplus),
+                                      sum(ruta_strm$dplus)))
+"
+"2","Error in data.frame(Tramo = c(""Tramo 1"", ""Tramo 2"", ""Tramo 3"", ""Tramo 4"",  : 
+  object 'tramo7' not found
+"
