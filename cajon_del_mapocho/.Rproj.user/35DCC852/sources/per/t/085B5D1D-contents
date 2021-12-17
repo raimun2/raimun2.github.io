@@ -21,7 +21,7 @@ La ruta el Cajón del Mapocho recorre algunos de estos hitos, conectando en un c
 
 Armé esta ruta porque disfruto de correr por los cerros, la ultradistancia y el desafío de la resistencia humana, y tome inspiración de otros desafios locales como la [Andes Azul Round](http://matt-maynard.com/mountains/andes-azul-round/). Además, como habitante de este valle, muchos de estos hitos me conectan con mi historia, mis recuerdos, mi familia y con nuestro territorio. 
 
-El primer intento de esta ruta fue completado el [20 de Noviembre de 2020](https://www.strava.com/activities/4367078150) por René Castel, Benjamin Perez y mi persona en modo autosuficiencia, en un tiempo de 17 horas y 44 minutos. El próximo intento está programado para el viernes 17 de diciembre de 2021.
+El mejor tiempo de esta ruta fue completado el [20 de Noviembre de 2020](https://www.strava.com/activities/4367078150) por René Castel, Benjamin Perez y mi persona en modo autosuficiencia, en un tiempo de 17 horas y 44 minutos.
 
 
 ```{r setup, include=FALSE}
@@ -43,7 +43,7 @@ ruta_sp <- SpatialPointsDataFrame(data=ruta_strm,
                                   proj4string=CRS("+proj=longlat +datum=WGS84"))
 
 
-PCS <- c(9.65, 22.05, 33.35, 42.05, 45.7, 50.82, 63.5, 81.55, 87.7)
+PCS <- c(9.65, 22.05, 33.35, 42.05, 45.7, 50.82, 63.5, 81.55, 87.7)*1000
 
 colores <- brewer.pal(n = 9, name = "Paired")
 
