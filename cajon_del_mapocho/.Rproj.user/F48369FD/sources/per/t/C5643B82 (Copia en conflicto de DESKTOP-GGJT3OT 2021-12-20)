@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1634914716879.000,
+    "dirty" : false,
+    "encoding" : "ISO8859-1",
+    "folds" : "",
+    "hash" : "3926654101",
+    "id" : "C5643B82",
+    "lastKnownWriteTime" : 1634924980,
+    "last_content_update" : 1634924980121,
+    "path" : "C:/Users/Raimundo/Dropbox/Github/raimun2.github.io/cajon_del_mapocho/guardaDXF.R",
+    "project_path" : "guardaDXF.R",
+    "properties" : {
+        "cursorPosition" : "9,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
