@@ -43,7 +43,7 @@ ruta_sp <- SpatialPointsDataFrame(data=ruta_strm,
                                   proj4string=CRS("+proj=longlat +datum=WGS84"))
 
 
-PCS <- c(9.65, 22.05, 33.35, 42.05, 45.7, 50.82, 63.5, 81.55, 87.7)*1000
+PCS <- c(11455, 24922, 36816, 44987, 48744, 53451, 66000, 84000, 89000)
 
 colores <- brewer.pal(n = 9, name = "Paired")
 
@@ -116,7 +116,7 @@ tramo9sp <- tramo9 %>% select(lon,lat) %>%
 ```
 
 
-#### Distancia total:        87 km
+#### Distancia total:        89 km
 
 #### Desnivel positivo:    5100 m
 
@@ -166,7 +166,7 @@ ggplot() +
 
 ## Tramo 1: Puente Ñilhue - Corral Llanos de Javier 
 
-### [(Km 0 - Km 9.5)](https://www.strava.com/segments/26514256)
+### [(Km 0 - Km 11)](https://www.strava.com/segments/26514256)
 
 La ruta comienza y termina en el puente Ñilhue, clásico acceso a la cordillera desde donde se puede subir al cerro San Ramón, Provincia, Ñipa, Alto del Naranjo entre otros. 
 
@@ -182,7 +182,7 @@ Este lugar obtiene su nombre de su geografía, que corresponde a una planicie en
 
 ## Tramo 2: Corral Llanos de Javier - Corral Quemado 
 
-### [(Km 9.5 - Km 22)](https://www.strava.com/segments/26514275)
+### [(Km 11 - Km 24)](https://www.strava.com/segments/26514275)
 
 El segundo tramo sube desde Llanos de Javier hacia el cerro Boniguita, donde se encuentran unas torres de alta tension. Desde este punto se puede divisar el cerro Canoitas hacia el norte, y la ruta desciende hacia los Maitenes, pasando por Nido de Condores, un sector frecuentado por motociclistas.
 
@@ -190,7 +190,7 @@ La ruta está bien marcada y es el primer tramo totalmente corrible de esta ruta
 
 ## Tramo 3: Corral Quemado - La Parva 
 
-### [(Km 22 - Km 33.5)](https://www.strava.com/segments/26514318)
+### [(Km 24 - Km 35)](https://www.strava.com/segments/26514318)
   
 En este punto se bifurca la via proveniente desde Santiago en 2 caminos, uno hacia los Centros de Ski y el camino a la Mina La Disputada. Corral Quemado formó parte del sistema de caminos incaicos y se dice que fue un importante punto de relevo para las ceremonias que se realizaban en la cumbre del cerro El Plomo. 
 
@@ -202,7 +202,7 @@ Justo antes de llegar a La Parva se atraviesan algunos arroyos, lo que sería el
 
 ## Tramo 4: La Parva - Cancha de Carreras 
 
-### [(Km 33.5 - Km 42)](https://www.strava.com/segments/26514349)
+### [(Km 35 - Km 44)](https://www.strava.com/segments/26514349)
 
 En este centro de Ski recibe visitantes todo el invierno, pero en el verano también, siendo un lugar frecuentado por montañistas que se aventuran a hacer cumbres como el cerro Pintor, Leonera, o el Plomo. 
 
@@ -212,7 +212,7 @@ Subiendo desde el campamento Doite ubicado en la base del andarivel Las Águilas
 
 ## Tramo 5: Cancha de Carreras - Campamento Federación 
 
-### [(Km 42 - Km 45.5)](https://www.strava.com/segments/26514787) 
+### [(Km 44 - Km 46)](https://www.strava.com/segments/26514787) 
   
 
 Esta planicie tiene una meseta rectangular que la cultura popular también llama ovnipuerto, a 4150 msnm. En esta sección es común encontrarse con nieve hasta los meses de primavera, por lo que si desean hacer un tiempo rápido se recomienda intentar la ruta en el verano. 
@@ -224,7 +224,7 @@ La sección entre Cancha de Carreras y el Campamento Federación corresponde al 
 
 ## Tramo 6: Campamento Federacion - Piedra Numerada 
 
-### [(Km 45.5 - Km 51)](https://www.strava.com/segments/26514412) 
+### [(Km 46 - Km 53)](https://www.strava.com/segments/26514412) 
   
 El campamento Federación se encuentra en la base del cerro el Plomo y suele ser frecuentado por montañistas durante la temporada de primavera-verano. Desde Federación aún quedan 42 kilómetros de descenso para llegar a la meta. 
 
@@ -237,7 +237,7 @@ En este trayecto aparece un afluente del rio Mapocho llamado estero del Cepo, el
 
 ## Tramo 7: Piedra Numerada - Refugio del Cepo 
 
-### [(Km 51 - Km 63.5)](https://www.strava.com/segments/26514447) 
+### [(Km 53 - Km 65)](https://www.strava.com/segments/26514447) 
   
 En Piedra Numerada hay que tomar un desvío para continuar junto al rio, ya que la ruta mas frecuentada se devuelve hacia los centros de Ski. 
 
@@ -249,7 +249,7 @@ Si continúa bajando por el rio Cepo, luego de varios kilómetros llega a un ref
 
 ## Tramo 8: Refugio del Cepo - La Ermita 
 
-### [(Km 63.5 - Km 81.5)](https://www.strava.com/segments/26514483)
+### [(Km 65 - Km 83)](https://www.strava.com/segments/26514483)
 
 Al refugio del rio Cepo se puede llegar desde el camino a Valle nevado también, por lo que se tiene un par de rutas de escape en caso de tener contratiempos. 
 
@@ -263,7 +263,7 @@ Luego del ultimo cruce del rio Molina en el kilometro 77 se llega a Antahuaya, u
 
 ## Tramo 9: La Ermita - Puente Ñilhue 
 
-### [(Km 81.5 - Km 87)](https://www.strava.com/segments/26514504)
+### [(Km 83 - Km 89)](https://www.strava.com/segments/26514504)
 
 La Ermita es el último hito de la ruta y corresponde a un lugar de encuentro para deportistas de montaña, especialmente ciclistas que suben al cajón durante todo el año. 
 
@@ -288,9 +288,9 @@ drive_auth(cache = ".secrets", email = "raimundosanchezu@gmail.com")
 gs4_auth(token = drive_token())
 
 
-tabla_dist <- read_sheet("https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing")
+tabla_dist <- read_sheet("https://docs.google.com/spreadsheets/d/1gXVkYR1aznKo8HUoBd68Rq8AHgwLSCYWH52IdPTPYsg/edit?usp=sharing")[1:10,]
 tabla_dist$`Tiempo 2020` <- substr(as.character(tabla_dist$`Tiempo 2020`),12,22)
-tabla_dist$Tramo <- c(1:9,NA)
+tabla_dist$Tramo[1:10] <- c(1:9,NA)
 
 datatable(tabla_dist, rownames = FALSE, filter="none", 
           options = list(pageLength = 11, scrollX=F, searching=F, ordering=F, lengthChange = F, paging=F, info=F) ) %>% 
