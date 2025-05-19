@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trail Certification – Metric Trails">
+  <title>Trail Certification | Metric Trails</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    header {
+      background: url('../header-image.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    header p {
+      font-size: 1.2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 0.75rem 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #444;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #eee;
+    }
+    #map-placeholder {
+      background-color: #ddd;
+      height: 400px;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../logo.png" alt="Metric Trails Logo" />
+    <h1>Metric Trails</h1>
+    <p>Measuring the mountains, one trail at a time</p>
+  </header>
+
+  <nav>
+    <a href="../certification/index.html">Trail Certification</a>
+    <a href="../studies/index.html">Trail Studies</a>
+  </nav>
+
+  <div class="container">
+    <section>
+      <h2>Why Trail Certification Matters</h2>
+      <p>Have you ever finished a run with your friend and compared GPS stats, only to find <strong>inconsistent distances or elevation gain</strong>? Have you ever done a race expecting an aid station at kilometer 10, only to find it several kilometers further?</p>
+      <p>This happens because most trails and races are <strong>not measured with a standardized method</strong>. That creates confusion, unfair results, and sometimes even safety risks.</p>
+    </section>
+
+    <section>
+      <h2>The Metric Trails Approach</h2>
+      <p>We designed a scientific certification process to ensure that every certified course meets three core principles:</p>
+      <ul>
+        <li><strong>Input quality:</strong> using validated GPS devices, in proper conditions</li>
+        <li><strong>Process quality:</strong> applying strict and replicable measurement protocols</li>
+        <li><strong>Output quality:</strong> delivering high-resolution, spatially accurate trail data</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Levels of Certification</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bronze</strong></td>
+            <td>Remote GIS validation. Anyone can submit a GPX file. We verify it against known standards.</td>
+          </tr>
+          <tr>
+            <td><strong>Silver</strong></td>
+            <td>Field measurement using a validated device with a verified Metric Score.</td>
+          </tr>
+          <tr>
+            <td><strong>Gold</strong></td>
+            <td>Measurement by a certified Metric Trails measurer, following official protocol.</td>
+          </tr>
+          <tr>
+            <td><strong>Olympic</strong></td>
+            <td>Gold + post-processing with high-resolution DEM or LiDAR elevation data.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Certified Races Map</h2>
+      <p>Select a race from the dropdown to see its location and certification details.</p>
+      <div id="map-placeholder">
+        [ Interactive map coming soon ]
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Metric Trails</p>
+    <p><a href="../index.html">Back to homepage</a></p>
+  </footer>
+</body>
+</html>
