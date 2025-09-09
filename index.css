@@ -387,10 +387,10 @@
 }
 
 .u-section-3 .u-repeater-1 {
-  grid-template-columns: repeat(3, 33.3333%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 540px;
   --gap: 0px;
-  grid-auto-columns: 33.3333%;
+  grid-auto-columns: auto;
 }
 
 .u-section-3 .u-list-item-1 {
@@ -408,8 +408,8 @@
 .u-section-3 .u-icon-1 {
   width: 464px;
   height: 563px;
-  margin: -218px -72px 0;
-  padding: 131px;
+  padding: 131px; 
+  margin: -218px -72px 0; 
 }
 
 .u-section-3 .u-text-2 {
