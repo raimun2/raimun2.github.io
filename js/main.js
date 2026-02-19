@@ -7,8 +7,8 @@
       nav_rd: 'I+D',
       nav_lab: 'Lab',
 
-      hero_title: 'Doctor en Ingeniería de Sistemas Complejos. Investigación y datos para entender el movimiento humano en el mundo real.',
-      hero_sub: 'Decodifico el caos y lo convierto en señales valiosas para la toma de decisiones.',
+      hero_title: 'Doctor en Ingeniería de Sistemas Complejos.',
+      hero_sub: 'Investigación y datos para entender el movimiento humano en el mundo real.',
       hero_bio: 'Soy Raimundo Sanchez, Doctor en Ingeniería de Sistemas Complejos. Soy Research Fellow en The University of Queensland (Brisbane, Australia) y trabajo en investigación aplicada en wearables y analítica del movimiento humano en condiciones reales. Me especializo en validación y benchmarking fuera del laboratorio, diseño de estudios y modelado longitudinal para convertir señales ruidosas en evidencia defendible. Antes lideré Revenue Analytics en LATAM Airlines, construyendo productos de apoyo a decisiones a escala. También soy fundador de Metric Trails.',
       hero_cred: 'Research Fellow, The University of Queensland (Brisbane, Australia). Fundador de Metric Trails.',
       hero_cta_mentoring: 'Mentoría 1:1',
@@ -80,8 +80,8 @@
       nav_rd: 'R&D',
       nav_lab: 'Lab',
 
-      hero_title: 'PhD in Complex Systems Engineering. Research and data to understand human movement in the real world.',
-      hero_sub: 'I decode chaos into valuable signals for decision-making.',
+      hero_title: 'PhD in Complex Systems Engineering.',
+      hero_sub: 'Research and data to understand human movement in the real world.',
       hero_bio: 'I am Raimundo Sanchez, PhD in Complex Systems Engineering. I am a Research Fellow at The University of Queensland (Brisbane, Australia), working on applied research in wearables and human movement analytics in real-world settings. I specialize in field validation and benchmarking, study design, and longitudinal modeling to turn noisy signals into defensible evidence. Previously, I led Revenue Analytics at LATAM Airlines, building decision-support products at scale. I am also the founder of Metric Trails.',
       hero_cred: 'Research Fellow, The University of Queensland (Brisbane, Australia). Founder of Metric Trails.',
       hero_cta_mentoring: '1:1 Mentoring',
