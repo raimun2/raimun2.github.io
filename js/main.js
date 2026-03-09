@@ -5,45 +5,45 @@
       nav_press: 'Prensa',
       nav_papers: 'Papers',
       nav_rd: 'I+D',
-      nav_lab: 'Lab',
+      nav_artifacts: 'Artifacts', // Actualizado desde Lab
 
       hero_title: 'Ingeniero de Sistemas Complejos.',
-      hero_sub: 'I+D para la entender el movimiento humano en entornos reales.',
-      hero_bio: 'Soy Raimundo Sánchez, PhD en Ingeniería de Sistemas Complejos e investigador en la Universidad de Queensland. Desarrollo soluciones de I+D para wearables y análisis de movimiento, especializándome en transformar señales ruidosas de campo en evidencia validada. Mi trabajo conecta el procesamiento de señales con el rendimiento en condiciones reales. Anteriormente, lideré el área de Revenue Analytics en LATAM Airlines y fundé Metric Trails..',
+      hero_sub: 'I+D para entender el movimiento humano en entornos reales.', // Corregido el "para la entender"
+      hero_bio: 'Soy Raimundo Sánchez, PhD en Ingeniería de Sistemas Complejos e investigador en la Universidad de Queensland. Desarrollo soluciones de I+D para wearables y análisis biomecánico, especializándome en transformar señales ruidosas capturadas en terreno en evidencia validada. Mi trabajo conecta el procesamiento avanzado de datos con el rendimiento físico real. Previamente, lideré el área de Revenue Analytics en LATAM Airlines y fundé la startup Metric Trails.',
       hero_cred: 'R&D Scientist, The University of Queensland (Brisbane, Australia). Fundador de Metric Trails.',
       hero_cta_mentoring: 'Mentoría 1:1',
       hero_cta_rd: 'Hablemos de I+D',
 
-      mentoring_title: 'Mentoría 1:1',
-      mentoring_subtitle: 'Elige el track que mejor calza con tu perfil y agenda una mentoría enfocada en resultados concretos.',
+      mentoring_title: 'Mentoría en Data & Analytics',
+      mentoring_subtitle: 'Elige el track que mejor calza con tu perfil actual y agenda un plan enfocado en resultados concretos.',
 
       tech_label: 'Track Técnico',
-      tech_title: 'Para profesionales de Data y Analytics que quieran aclarar su próximo paso',
-      tech_body: 'Si dominas lo técnico pero quieres más influencia y proyección, este track te ayuda a definir tu próximo movimiento: seniority, cambio de rol (por ejemplo BI a Data Science) o transición a liderazgo.',
-      tech_link: 'Ver detalle ->',
+      tech_title: 'Para profesionales de Data que buscan dar el siguiente gran salto',
+      tech_body: 'Si ya dominas las herramientas técnicas pero buscas aumentar tu impacto en el negocio, este track te ayuda a definir tu próximo movimiento estratégico: consolidar tu seniority, transitar hacia nuevas disciplinas (ej. BI a Data Science) o prepararte para el liderazgo técnico.',
+      tech_link: 'Ver programa completo \u2192',
 
       exec_label: 'Track Ejecutivo',
-      exec_title: 'Para líderes de negocio que quieren tomar mejores decisiones en Data y AI',
-      exec_body: 'Para ejecutivos que trabajan con data y AI y necesitan separar señal de humo. Te ayuda a liderar equipos técnicos, evaluar proveedores, y conducir iniciativas impulsadas por datos con criterio.',
-      exec_link: 'Ver detalle ->',
+      exec_title: 'Para líderes de negocio que necesitan decisiones sólidas en Data & AI',
+      exec_body: 'Aclara el hype tecnológico. Este espacio está diseñado para ayudarte a liderar equipos técnicos con seguridad, evaluar proveedores sin caer en trampas de mercado y conducir iniciativas de datos guiadas exclusivamente por el retorno de inversión (ROI).',
+      exec_link: 'Ver programa completo \u2192',
 
-      press_title: 'Prensa',
-      press_subtitle: 'Apariciones y entrevistas seleccionadas.',
+      press_title: 'Prensa & Difusión',
+      press_subtitle: 'Apariciones destacadas en medios y entrevistas sobre mi trabajo.',
 
-      abc_desc: 'Sobre estándares para medir trail running: distancia, desnivel y comparabilidad entre recorridos.',
-      abc_cta: 'Ver nota',
+      abc_desc: 'Sobre los desafíos y la necesidad de estándares técnicos para medir el trail running: distancia, desnivel y comparabilidad entre rutas a nivel global.',
+      abc_cta: 'Leer en ABC News',
 
-      uai_title: 'Football Analytics y el uso de la data en los deportes',
-      uai_desc: 'Conversación sobre cómo convertir datos en decisiones deportivas y mejorar rendimiento con evidencia.',
-      uai_cta: 'Ver artículo',
+      uai_title: 'Football Analytics y el uso estratégico de la data en los deportes',
+      uai_desc: 'Una conversación a fondo sobre cómo convertir datos crudos en decisiones deportivas accionables para mejorar el rendimiento con evidencia.',
+      uai_cta: 'Leer el artículo',
 
-      om_title: 'Ingeniero/Data Science - Científico del trail running en Australia y Chile',
-      om_desc: 'Entrevista sobre trayectoria, ciencia de datos aplicada y trabajo en trail running entre Australia y Chile.',
-      om_cta: 'Ver entrevista',
+      om_title: 'Data Science en acción: El científico detrás del trail running',
+      om_desc: 'Entrevista repasando mi trayectoria profesional, la aplicación práctica de la ciencia de datos y mi investigación en el mundo del trail running.',
+      om_cta: 'Ver en YouTube',
 
-      papers_title: 'Papers seleccionados',
-      papers_sub: 'Seis publicaciones que representan mi trabajo en wearables, medición en terreno y analítica aplicada. Lista completa en Google Scholar.',
-      papers_full: 'Ver lista completa',
+      papers_title: 'Publicaciones Científicas',
+      papers_sub: 'Selección de mis investigaciones en wearables, medición en terreno y analítica deportiva aplicada.',
+      papers_full: 'Ver lista completa en Google Scholar',
 
       p1_why: 'Valida estimaciones de desnivel acumulado usando distintos wearables y pipelines de post-proceso en terreno montañoso.',
       p2_why: 'Detecta y modela transiciones de marcha/carrera en subida usando wearables, con foco en dinámica real de trail.',
@@ -52,25 +52,25 @@
       p5_why: 'Propone un framework geoespacial multimodal para mapear terreno montañoso con precisión útil para investigación de locomoción.',
       p6_why: 'Relaciona carga de entrenamiento, HRV, fatiga, sueño y lesión en atletas durante un mesociclo, con datos longitudinales.',
 
-      rd_title: 'I+D en wearables y analítica del movimiento',
-      rd_subtitle: 'Trabajo con equipos de producto e investigación para transformar señales ruidosas en evidencia defendible y decisiones claras.',
-      rd_b1: 'Validación y benchmarking en condiciones reales (fuera del laboratorio)',
-      rd_b2: 'Diseño de estudios, métricas y protocolos reproducibles',
-      rd_b3: 'Modelado longitudinal, fusión de sensores y pipelines de señales',
-      rd_formats_title: 'Formatos típicos',
-      rd_formats_body: 'Audit, advisory, o implementación por sprint. Alcance y tiempos se ajustan al problema.',
-      rd_formats_note: '(Esto se puede pulir después con precios o paquetes, si te interesa.)',
-      rd_cta: 'Escríbeme',
-      rd_contact: 'Para colaborar o contratarme: escríbeme a raimundosanchezu@gmail.com o conectemos por LinkedIn.',
+      rd_title: 'Consultoría I+D: Wearables y Analítica del Movimiento',
+      rd_subtitle: 'Colaboro con equipos de investigación y desarrollo de producto para transformar datos fisiológicos y cinemáticos crudos en evidencia defendible y decisiones claras.',
+      rd_b1: 'Validación y benchmarking: Testeo de sensores y algoritmos en condiciones reales (fuera de entornos controlados de laboratorio).',
+      rd_b2: 'Diseño experimental: Creación de métricas, estudios y protocolos reproducibles.',
+      rd_b3: 'Arquitectura de datos: Modelado longitudinal, fusión de sensores y construcción de pipelines de procesamiento de señales.',
+      rd_formats_title: 'Formatos de Colaboración',
+      rd_formats_body: 'Ofrezco flexibilidad según el estado de tu proyecto: auditorías técnicas (Audits), asesoría continua (Advisory), o desarrollo directo mediante Sprints de implementación.',
+      rd_formats_note: 'El alcance, los entregables y los tiempos se ajustan a la complejidad del problema a resolver.',
+      rd_cta: 'Enviar correo',
+      rd_contact: '¿Tienes un proyecto en mente? Escríbeme a raimundosanchezu@gmail.com o conectemos por LinkedIn para evaluar cómo puedo aportar a tu equipo.',
 
-      lab_title: 'Lab',
-      lab_sub: 'Proyectos y prototipos.',
-      lab_cta: 'Ir a GitHub',
+      artifacts_title: 'Artifacts', // Actualizado desde Lab
+      artifacts_sub: 'Repositorios de código, procesamiento de datos, herramientas y documentación de prototipos técnicos (software y hardware).',
+      artifacts_cta: 'Explorar en GitHub',
 
-      footer_more: 'Más links',
+      footer_more: 'Más enlaces profesionales e intereses',
       footer_elsewhere: 'En otros lugares',
 
-      meta_title: 'Raimundo Sanchez | I+D en wearables y analítica del movimiento + mentoría',
+      meta_title: 'Raimundo Sánchez | I+D en Wearables y Analítica del Movimiento',
       meta_desc: 'Doctor en Ingeniería de Sistemas Complejos. Investigación aplicada en wearables y analítica del movimiento humano en el mundo real. Mentoría 1:1 en Data y Analytics.'
     },
     en: {
@@ -78,45 +78,45 @@
       nav_press: 'Press',
       nav_papers: 'Papers',
       nav_rd: 'R&D',
-      nav_lab: 'Lab',
+      nav_artifacts: 'Artifacts', // Actualizado
 
       hero_title: 'Complex Systems Engineer.',
       hero_sub: 'R&D for human locomotion in the wild.',
-      hero_bio: 'I am Raimundo Sanchez, a PhD in Complex Systems Engineering and Research Fellow at The University of Queensland. I develop R&D solutions for wearables and movement analytics, specialising in turning noisy, field-based signals into validated evidence. My work bridges the gap between signal processing and real-world performance. Previously, I led Revenue Analytics at LATAM Airlines and founded Metric Trails.',
+      hero_bio: 'I am Raimundo Sanchez, a PhD in Complex Systems Engineering and Research Fellow at The University of Queensland. I develop R&D solutions for wearables and movement analytics, specialising in turning noisy, field-based signals into validated evidence. My work bridges the gap between advanced data processing and real-world physical performance. Previously, I led Revenue Analytics at LATAM Airlines and founded the startup Metric Trails.',
       hero_cred: 'R&D Scientist, The University of Queensland (Brisbane, Australia). Founder of Metric Trails.',
       hero_cta_mentoring: '1:1 Mentoring',
       hero_cta_rd: 'R&D consulting',
 
-      mentoring_title: '1:1 Mentoring',
-      mentoring_subtitle: 'Choose the track that fits your profile and book a session focused on concrete outcomes.',
+      mentoring_title: 'Data & Analytics Mentoring',
+      mentoring_subtitle: 'Choose the track that fits your current profile and book a session focused on concrete, strategic outcomes.',
 
       tech_label: 'Technical track',
-      tech_title: 'For data and analytics professionals who want clarity on their next step',
-      tech_body: 'If you have strong technical skills but want more influence and trajectory, this track helps you define your next move: seniority, role change (eg BI to Data Science), or transition into leadership.',
-      tech_link: 'See details ->',
+      tech_title: 'For data professionals looking to make the next big leap',
+      tech_body: 'If you already master the technical tools but want to increase your business impact, this track helps you define your next strategic move: consolidating seniority, pivoting to new disciplines (e.g., BI to Data Science), or preparing for technical leadership.',
+      tech_link: 'See full program \u2192',
 
       exec_label: 'Executive track',
-      exec_title: 'For business leaders who want better decisions in data and AI',
-      exec_body: 'For leaders working with data and AI who need to separate signal from noise. Helps you lead technical teams, evaluate vendors, and drive data-driven initiatives with good judgment.',
-      exec_link: 'See details ->',
+      exec_title: 'For business leaders who need solid decisions in Data & AI',
+      exec_body: 'Cut through the technological hype. This space is designed to help you confidently lead technical teams, evaluate vendors without falling into market traps, and drive data initiatives guided exclusively by Return on Investment (ROI).',
+      exec_link: 'See full program \u2192',
 
-      press_title: 'Press',
-      press_subtitle: 'Selected media and interviews.',
+      press_title: 'Press & Media',
+      press_subtitle: 'Selected media appearances and interviews about my work.',
 
-      abc_desc: 'On trail running measurement standards: distance, elevation gain, and comparability across courses.',
-      abc_cta: 'Read article',
+      abc_desc: 'On the challenges and the need for technical standards to measure trail running: distance, elevation gain, and comparability across global courses.',
+      abc_cta: 'Read on ABC News',
 
-      uai_title: 'Football analytics and the use of data in sports',
-      uai_desc: 'A conversation on turning data into sports decisions and improving performance with evidence.',
+      uai_title: 'Football Analytics and the strategic use of data in sports',
+      uai_desc: 'An in-depth conversation on turning raw data into actionable sports decisions to improve performance with solid evidence.',
       uai_cta: 'Read article',
 
-      om_title: 'Engineer / Data Science - Trail running researcher in Australia and Chile',
-      om_desc: 'Interview about my path, applied data science, and trail running work across Australia and Chile.',
-      om_cta: 'Watch interview',
+      om_title: 'Data Science in action: The scientist behind trail running',
+      om_desc: 'Interview reviewing my career path, applied data science, and my research in the world of trail running.',
+      om_cta: 'Watch on YouTube',
 
-      papers_title: 'Selected papers',
-      papers_sub: 'Six papers that represent my work in wearables, field measurement, and applied analytics. Full list on Google Scholar.',
-      papers_full: 'Full list',
+      papers_title: 'Scientific Publications',
+      papers_sub: 'A selection of my research in wearables, field measurement, and applied sports analytics.',
+      papers_full: 'See full list on Google Scholar',
 
       p1_why: 'Validates elevation gain estimates across common wearables and processing pipelines in mountainous terrain.',
       p2_why: 'Detects and models walk-run transitions during uphill trail running using wearables, focused on real-world dynamics.',
@@ -125,26 +125,26 @@
       p5_why: 'Proposes a multimodal geospatial framework to map mountain terrain with precision useful for locomotion research.',
       p6_why: 'Links training load, HRV, fatigue, sleep, and injury across a training mesocycle using longitudinal athlete data.',
 
-      rd_title: 'Wearable R&D and human movement analytics',
-      rd_subtitle: 'I work with product and research teams to turn noisy signals into defensible evidence and clear decisions.',
-      rd_b1: 'Real-world validation and benchmarking (outside the lab)',
-      rd_b2: 'Study design, metrics, and reproducible protocols',
-      rd_b3: 'Longitudinal modeling, sensor fusion, and signal pipelines',
-      rd_formats_title: 'Typical formats',
-      rd_formats_body: 'Audit, advisory, or sprint-based implementation. Scope and timelines adapt to the problem.',
-      rd_formats_note: '(We can refine this later with pricing or packages, if useful.)',
-      rd_cta: 'Email me',
-      rd_contact: 'For collaboration or consulting: email me at raimundosanchezu@gmail.com or connect on LinkedIn.',
+      rd_title: 'R&D Consulting: Wearables and Movement Analytics',
+      rd_subtitle: 'I collaborate with research and product development teams to transform raw physiological and kinematic data into defensible evidence and clear decisions.',
+      rd_b1: 'Validation and benchmarking: Testing sensors and algorithms in real-world conditions (outside controlled lab environments).',
+      rd_b2: 'Experimental design: Creation of reproducible metrics, studies, and protocols.',
+      rd_b3: 'Data architecture: Longitudinal modeling, sensor fusion, and construction of signal processing pipelines.',
+      rd_formats_title: 'Collaboration Formats',
+      rd_formats_body: 'I offer flexibility depending on your project\'s status: technical audits, continuous advisory, or direct development through implementation sprints.',
+      rd_formats_note: 'Scope, deliverables, and timelines adapt to the complexity of the problem to be solved.',
+      rd_cta: 'Send email',
+      rd_contact: 'Have a project in mind? Email me at raimundosanchezu@gmail.com or connect on LinkedIn to evaluate how I can contribute to your team.',
 
-      lab_title: 'Lab',
-      lab_sub: 'Projects and prototypes.',
-      lab_cta: 'Go to GitHub',
+      artifacts_title: 'Artifacts', // Actualizado
+      artifacts_sub: 'Code repositories, data processing pipelines, tools, and technical prototype documentation (software and hardware).',
+      artifacts_cta: 'Explore on GitHub',
 
-      footer_more: 'More links',
+      footer_more: 'More professional links and interests',
       footer_elsewhere: 'Elsewhere',
 
-      meta_title: 'Raimundo Sanchez | Wearable R&D + mentoring',
-      meta_desc: 'PhD in Complex Systems Engineering. Applied research in wearables and human movement analytics in real-world settings. 1:1 mentoring in data and analytics.'
+      meta_title: 'Raimundo Sánchez | Wearables R&D and Movement Analytics',
+      meta_desc: 'PhD in Complex Systems Engineering. Applied research in wearables and human movement analytics in real-world settings. 1:1 mentoring in Data and Analytics.'
     }
   };
 
@@ -167,7 +167,8 @@
     document.querySelectorAll('[data-i18n]').forEach(el=>{
       const key = el.getAttribute('data-i18n');
       if(dict[key] != null){
-        el.textContent = dict[key];
+        // Usar innerHTML en lugar de textContent si hay etiquetas HTML en el texto
+        el.innerHTML = dict[key]; 
       }
     });
 
