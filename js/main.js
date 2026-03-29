@@ -69,16 +69,23 @@
       meta_title: 'Raimundo Sánchez | Constructor de Sistemas',
       meta_desc: 'PhD en Sistemas Complejos. Construyo sistemas inteligentes y arquitecturas de datos orientadas a la decisión. I+D aplicado y Data Advisory.',
 
-      // Track Ejecutivo (Subpágina)
+      // Track Ejecutivo / Técnico Compartidos
+      process_title: 'El Proceso',
+      results_title: 'Resultados',
+      booking_title: 'Agenda tu sesión (90 min)',
+      investment: 'Inversión',
+      pay_and_book: 'Pagar y agendar',
+      booking_b1: '✓ El enlace privado de Calendly se habilitará inmediatamente tras el pago para reservar la sesión.',
+      booking_b3: '✓ Requiere reserva con un mínimo de 24 horas de anticipación.',
+
+      // Track Ejecutivo
       exec_hero_title: 'Data Advisory:<br><span class="text-[#00AEEF]">Estrategia y Arquitectura</span>',
       exec_hero_sub: 'Diseñado para líderes de negocio, gerentes y directores que necesitan separar la señal del ruido en sus iniciativas de Data & AI.',
       exec_hero_bio: 'El mercado está saturado de hype tecnológico. Mi trabajo es entregarte claridad epistemológica: evaluar la viabilidad real de tus proyectos, auditar proveedores con rigor técnico y asegurar que cada iniciativa de datos esté estrictamente atada al ROI corporativo y no al algoritmo de moda.',
-      exec_p1_title: 'Diagnóstico y Topología del Problema (90 min)',
+      exec_p1_title: 'Diagnóstico y Topología del Problema',
       exec_p1_desc: 'Aislamos el problema real. Evaluamos tus cuellos de botella actuales, la madurez de tu infraestructura y la validez técnica de las propuestas que tienes sobre la mesa.',
       exec_p2_title: 'Reducción y Framework de Decisión',
       exec_p2_desc: 'Eliminamos el ruido. Diseñamos una hoja de ruta lean, priorizando arquitecturas empíricamente viables y estrictamente alineadas a tus métricas de éxito corporativas.',
-      exec_p3_title: 'Alineación y Seguimiento (30 min)',
-      exec_p3_desc: 'Calibración de la estrategia, resolución de fricciones en la implementación y definición clara de los siguientes pasos.',
       exec_r1_title: 'Criterio Técnico',
       exec_r1_desc: 'Capacidad para evaluar, descartar o aprobar propuestas tecnológicas basándote en evidencia funcional, no en discursos de venta.',
       exec_r2_title: 'Traducción Estratégica',
@@ -86,16 +93,14 @@
       exec_r3_title: 'Sistemas Orientados al ROI',
       exec_r3_desc: 'Priorización despiadada del portafolio analítico. Asignación de capital exclusiva a arquitecturas que resuelven problemas de negocio reales.',
 
-      // Track Técnico (Subpágina)
+      // Track Técnico
       tech_hero_title: 'Data Advisory:<br><span class="text-[#00AEEF]">Arquitectura y Toma de Decisión</span>',
       tech_hero_sub: 'Para profesionales y expertos de datos. Transición desde la ejecución de código hacia el diseño de arquitecturas de sistemas.',
       tech_hero_bio: 'Dominar el stack técnico no basta si el impacto de tus modelos no escala. Evaluaremos la topología de tus proyectos para estructurar flujos de trabajo sistémicos, conectar tu código directamente con el ROI corporativo y preparar tu transición al liderazgo técnico. Cero hype, pura evidencia empírica.',
-      tech_p1_title: 'Diagnóstico Estructural (90 min)',
+      tech_p1_title: 'Diagnóstico Estructural',
       tech_p1_desc: 'Evaluación estricta de tu stack, contexto operacional y fricciones de implementación. Aislamos el ruido que impide que tus análisis se conviertan en decisiones.',
       tech_p2_title: 'Diseño de Arquitectura Profesional',
       tech_p2_desc: 'Frameworks de decisión. Diseño de un plan empírico para estructurar tus proyectos, traducir complejidad matemática a lenguaje de negocio y escalar tu seniority.',
-      tech_p3_title: 'Alineación y Seguimiento (30 min)',
-      tech_p3_desc: 'Calibración de la estrategia, resolución de fricciones tácticas en el código o con stakeholders, y definición de siguientes pasos.',
       tech_r1_title: 'Diseño de Sistemas',
       tech_r1_desc: 'Capacidad para estructurar pipelines y modelos que no solo compilen, sino que resuelvan el problema corporativo de forma lean y escalable.',
       tech_r2_title: 'Reducción de Ruido',
@@ -172,16 +177,23 @@
       meta_title: 'Raimundo Sánchez | System Builder',
       meta_desc: 'PhD in Complex Systems. I build intelligent systems and decision-oriented data architectures. Applied R&D and Data Advisory.',
 
-      // Track Ejecutivo (Subpage)
+      // Track Ejecutivo / Técnico Compartidos
+      process_title: 'The Process',
+      results_title: 'Results',
+      booking_title: 'Book your session (90 min)',
+      investment: 'Investment',
+      pay_and_book: 'Pay and book',
+      booking_b1: '✓ The private Calendly link will be enabled immediately after payment to book the session.',
+      booking_b3: '✓ Requires booking with a minimum of 24 hours in advance.',
+
+      // Track Ejecutivo
       exec_hero_title: 'Data Advisory:<br><span class="text-[#00AEEF]">Strategy and Architecture</span>',
       exec_hero_sub: 'Designed for business leaders, managers, and directors who need to separate the signal from the noise in their Data & AI initiatives.',
       exec_hero_bio: 'The market is saturated with tech hype. My job is to provide epistemological clarity: evaluate the real viability of your projects, audit vendors with technical rigor, and ensure every data initiative is strictly tied to corporate ROI, not the trending algorithm.',
-      exec_p1_title: 'Diagnosis and Problem Topology (90 min)',
+      exec_p1_title: 'Diagnosis and Problem Topology',
       exec_p1_desc: 'We isolate the real problem. We evaluate your current bottlenecks, your infrastructure\'s maturity, and the technical validity of the proposals on your table.',
       exec_p2_title: 'Reduction and Decision Framework',
       exec_p2_desc: 'We eliminate the noise. We design a lean roadmap, prioritizing empirically viable architectures strictly aligned with your corporate success metrics.',
-      exec_p3_title: 'Alignment and Follow-up (30 min)',
-      exec_p3_desc: 'Strategy calibration, implementation friction resolution, and clear definition of next steps.',
       exec_r1_title: 'Technical Criteria',
       exec_r1_desc: 'Ability to evaluate, discard, or approve tech proposals based on functional evidence, not sales pitches.',
       exec_r2_title: 'Strategic Translation',
@@ -189,16 +201,14 @@
       exec_r3_title: 'ROI-Oriented Systems',
       exec_r3_desc: 'Ruthless prioritization of the analytical portfolio. Capital allocation exclusive to architectures that solve real business problems.',
 
-      // Track Técnico (Subpage)
+      // Track Técnico
       tech_hero_title: 'Data Advisory:<br><span class="text-[#00AEEF]">Architecture and Decision Making</span>',
       tech_hero_sub: 'For data professionals and experts. Transition from code execution to system architecture design.',
       tech_hero_bio: 'Mastering the technical stack is not enough if the impact of your models doesn\'t scale. We will evaluate the topology of your projects to structure systemic workflows, connect your code directly to corporate ROI, and prepare your transition to technical leadership. Zero hype, pure empirical evidence.',
-      tech_p1_title: 'Structural Diagnosis (90 min)',
+      tech_p1_title: 'Structural Diagnosis',
       tech_p1_desc: 'Strict evaluation of your stack, operational context, and implementation frictions. We isolate the noise preventing your analysis from becoming decisions.',
       tech_p2_title: 'Professional Architecture Design',
       tech_p2_desc: 'Decision frameworks. Design an empirical plan to structure your projects, translate mathematical complexity into business language, and scale your seniority.',
-      tech_p3_title: 'Alignment and Follow-up (30 min)',
-      tech_p3_desc: 'Strategy calibration, resolution of tactical frictions in code or with stakeholders, and definition of next steps.',
       tech_r1_title: 'System Design',
       tech_r1_desc: 'Ability to structure pipelines and models that don\'t just compile, but solve the corporate problem in a lean and scalable way.',
       tech_r2_title: 'Noise Reduction',
